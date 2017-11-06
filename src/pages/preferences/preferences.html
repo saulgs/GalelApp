@@ -1,0 +1,49 @@
+<!--
+  Generated template for the PreferencesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Encuentra lo que quieres!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h4>Categorías</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label>Alfareria</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cueros</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Calzado</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Muebles</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Carpinteria</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
+   <ion-item>
+    <ion-label color="dark" stacked>Precio mínimo</ion-label>
+    <ion-input type="text" placeholder="Ej: 13.00"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label color="dark" stacked>Precio máximo</ion-label>
+    <ion-input type="text" placeholder="Ej: 130.00"></ion-input>
+  </ion-item>
+  <a ion-button full (click)="gotoMarket()"> Busca ya! </a>
+</ion-content>

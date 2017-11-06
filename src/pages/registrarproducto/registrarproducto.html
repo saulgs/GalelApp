@@ -1,0 +1,65 @@
+<!--
+  Generated template for the RegistrarproductoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Vende tus artesanías!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="dark" stacked>Nombre del producto</ion-label>
+    <ion-input type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="dark" stacked>Descripción</ion-label>
+    <ion-input type="text" placeholder="Ej: Zapatilla de cuero estilo oxford"></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-label color="dark" stacked>Categorías</ion-label>
+    <ion-item>
+      <ion-label>Alfareria</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cueros</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Calzado</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Muebles</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Carpinteria</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-label color="dark" stacked>Precio</ion-label>
+    <ion-input type="text" placeholder="Ej: 130.00"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="dark" stacked>Cantidad</ion-label>
+    <ion-input type="number" placeholder="Ej: 5"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="dark" stacked>Color</ion-label>
+    <ion-input type="text" placeholder="Ej: café"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label color="dark" stacked>Marca</ion-label>
+    <ion-input type="text" placeholder="Ej: Otti"></ion-input>
+  </ion-item>
+  <a ion-button full (click)="gotoMarket()"> Vende ya! </a>
+</ion-content>

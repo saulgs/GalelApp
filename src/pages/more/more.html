@@ -1,0 +1,48 @@
+<!--
+  Generated template for the MorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mas opciones!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="gotoCuenta()">
+      <ion-icon name="md-body" item-start></ion-icon> Tu cuenta 
+    </button>
+
+    <button ion-item> 
+      <ion-icon name="md-list" item-start></ion-icon> Tu lista
+    </button>
+
+    <button ion-item> 
+      <ion-icon name="md-basket" item-start></ion-icon> Tus ordenes 
+    </button>
+  
+    <button ion-item> 
+      <ion-icon name="md-heart" item-start></ion-icon> Tus recomendaciones 
+    </button>
+  <!-- El metodo gotoLogin() aqui es diferente -->
+  <!-- Al navegar dentro de las tabs se crea un nav stack[] -->
+  <!-- Al hacer un nav push para salir de las tabs ocurre un problema -->
+  <!-- Abre la pagina de login dentro de las tabs -->
+  <!-- esto ocurre debido a que en el stack de navegacion todavia esta la pagina principal de tabs -->
+  <!-- y solo sustituye la tab actual por la pagina de login -->
+  <!-- para solucionarlo se debe obtener el id de la pagina Root de tabs -->
+  <!-- y sustituirlo por la de login, de esta manera se crea un nuevo stack de navegacion -->
+  <!-- y podemos navegar de nuevo con tranquilidad por la app -->
+  <!-- :v puede verlo en el archivo "src\pages\more\more.ts" v: -->
+    <button ion-item (click)="gotoLogin()">
+      <ion-icon name="md-log-out" item-start></ion-icon> Cerrar sesión 
+    </button>
+  </ion-list>
+
+</ion-content>
