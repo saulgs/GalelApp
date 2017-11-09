@@ -1,3 +1,4 @@
+import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MarketPage } from '../market/market';
@@ -15,6 +16,15 @@ import { MarketPage } from '../market/market';
   templateUrl: 'registrarproducto.html',
 })
 export class RegistrarproductoPage {
+  item: Item = {
+    name: "",
+    description: "",
+    category: "",
+    price: undefined,
+    quantity: undefined,
+    color: "",
+    mark: ""
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

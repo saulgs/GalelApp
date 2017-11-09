@@ -16,13 +16,13 @@
 <ion-content padding>
   <ion-item>
     <ion-label color="dark" stacked>Nombre del producto</ion-label>
-    <ion-input type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>
+    <ion-input [(ngModel)]="item.name" type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="dark" stacked>Descripción</ion-label>
-    <ion-input type="text" placeholder="Ej: Zapatilla de cuero estilo oxford"></ion-input>
+    <ion-input [(ngModel)]="item.description" type="text" placeholder="Ej: Zapatilla de cuero estilo oxford"></ion-input>
   </ion-item>
-  <ion-list>
+  <ion-list radio-group [(ngModel)]="item.category">
     <ion-label color="dark" stacked>Categorías</ion-label>
     <ion-item>
       <ion-label>Alfareria</ion-label>
@@ -47,19 +47,22 @@
   </ion-list>
   <ion-item>
     <ion-label color="dark" stacked>Precio</ion-label>
-    <ion-input type="text" placeholder="Ej: 130.00"></ion-input>
+    <ion-input [(ngModel)]="item.price" type="text" placeholder="Ej: 130.00"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="dark" stacked>Cantidad</ion-label>
-    <ion-input type="number" placeholder="Ej: 5"></ion-input>
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="Ej: 5"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="dark" stacked>Color</ion-label>
-    <ion-input type="text" placeholder="Ej: café"></ion-input>
+    <ion-input [(ngModel)]="item.color" type="text" placeholder="Ej: café"></ion-input>
   </ion-item>
    <ion-item>
     <ion-label color="dark" stacked>Marca</ion-label>
-    <ion-input type="text" placeholder="Ej: Otti"></ion-input>
+    <ion-input [(ngModel)]="item.mark" type="text" placeholder="Ej: Otti"></ion-input>
   </ion-item>
+  
+  {{item | json}}
+  
   <a ion-button full (click)="gotoMarket()"> Vende ya! </a>
 </ion-content>

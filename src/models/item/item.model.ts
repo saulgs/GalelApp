@@ -6,5 +6,5 @@ export interface Item {
     price: number;
     quantity: number;
     color: string;
-    marca: string;    
+    mark: string;    
 }
