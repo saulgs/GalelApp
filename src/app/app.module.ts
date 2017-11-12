@@ -1,5 +1,4 @@
-import { FIREBASE_CONFIG } from './firebase.credentials';
-import { BrowserModule } from '@angular/platform-browser';
+ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +21,9 @@ import { CartPage } from '../pages/cart/cart';
 import { TucuentaPage } from '../pages/tucuenta/tucuenta';
 
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
+import { ListaDeProductosService } from './../services/lista-de-productos/lista-de-productos.service';
+import { FIREBASE_CONFIG } from './firebase.credentials';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ListaDeProductosService
   ]
 })
 export class AppModule {}

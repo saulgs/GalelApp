@@ -26,23 +26,23 @@
     <ion-label color="dark" stacked>Categorías</ion-label>
     <ion-item>
       <ion-label>Alfareria</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-radio value='Alfareria'></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Cueros</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-radio value='Cueros'></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Calzado</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-radio value='Calzado'></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Muebles</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-radio value='Muebles'></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Carpinteria</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-radio value='Carpinteria'></ion-radio>
     </ion-item>
   </ion-list>
   <ion-item>
@@ -65,5 +65,5 @@
   <!-- COMENTAR ESTO -->
   {{item | json}}
   
-  <a ion-button full (click)="gotoMarket()"> Vende ya! </a>
+  <a ion-button full (click)="ingresarProducto(item)"> ¡Vender! </a>
 </ion-content>
