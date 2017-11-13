@@ -26,6 +26,7 @@ import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
 import { ListaDeProductosService } from './../services/lista-de-productos/lista-de-productos.service';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { Camera } from '@ionic-native/camera';
+import { ToastService } from './../services/toast/toast.service';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { Camera } from '@ionic-native/camera';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListaDeProductosService,
-    Camera
+    Camera,
+    ToastService
   ]
 })
 export class AppModule {}

@@ -1,3 +1,4 @@
+import { ToastService } from './../../services/toast/toast.service';
 import { MarketPage } from './../market/market';
 import { ListaDeProductosService } from './../../services/lista-de-productos/lista-de-productos.service';
 import { Item } from './../../models/item/item.model';
@@ -28,7 +29,8 @@ export class RegistrarproductoPage {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     private productos: ListaDeProductosService,
-    private camera: Camera
+    private camera: Camera,
+    private toast: ToastService
   ) {}
   
   private options: CameraOptions = {
@@ -48,6 +50,7 @@ export class RegistrarproductoPage {
 
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
+      this.toast.show(`${item.name} se ha guardado`);
       this.navCtrl.push(MarketPage, { key: ref.key } );
     })
   }

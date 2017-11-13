@@ -1,3 +1,4 @@
+import { ToastService } from './../../services/toast/toast.service';
 import { Item } from './../../models/item/item.model';
 import { ListaDeProductosService } from './../../services/lista-de-productos/lista-de-productos.service';
 import { Component } from '@angular/core';
@@ -19,7 +20,8 @@ export class StartPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
-    private productos: ListaDeProductosService
+    private productos: ListaDeProductosService,
+    private toast: ToastService
   ) { 
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
