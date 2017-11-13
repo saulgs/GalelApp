@@ -25,12 +25,12 @@
 
 <ion-content padding auto-hide>
   
-  <ion-list>
+  <!-- <ion-list>
     <ion-item-sliding *ngFor="let item of listaDeProductos$ | async">
       <ion-item>
         <ion-card>
           <img [src]="urlImg" (click)="show()" />
-          <ion-fab right bottom>
+           <ion-fab right bottom>
             <button ion-fab (click)="edit()">
               <ion-icon name="brush"></ion-icon>
             </button>
@@ -40,28 +40,32 @@
       </ion-item>
     </ion-item-sliding>
   </ion-list>
+  -->
   
   
-  
-<!--   
   <ion-list>
-    <ion-card>
+    <ion-card *ngFor="let item of listaDeProductos$ | async">
       <img src="../../assets/catalogo/cartera-cuero.jpg"/>
       <ion-card-content>
         <ion-card-title>
-          Cartera de cuero
+          <strong>
+            {{item.name}}
+          </strong>
         </ion-card-title>
         <p>
-          Cartera de cuero hecha en Valle de Angeles
+          {{item.description}}
         </p>
         <p>
-          Precio: $20.00
+            {{item.category}}
+        </p>
+        <p>
+          <strong>Precio: L {{item.price}}</strong>
         </p>
       </ion-card-content>
     </ion-card>
   </ion-list>
 
-
+<!-- 
   
   <ion-card>
     <img src="../../assets/catalogo/ceramica-lenca.jpg"/>

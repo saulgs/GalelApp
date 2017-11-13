@@ -3,7 +3,6 @@ import { ListaDeProductosService } from './../../services/lista-de-productos/lis
 import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MarketPage } from '../market/market';
  
 @IonicPage()
 @Component({
