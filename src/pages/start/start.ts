@@ -6,12 +6,6 @@ import { RegistrarproductoPage } from '../registrarproducto/registrarproducto';
 import { CartPage } from '../cart/cart';
 import { Observable } from 'rxjs/Observable';
 
-/**
- * Generated class for the StartPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -48,6 +42,11 @@ export class StartPage {
 
   gotoCart(){
     this.navCtrl.push(CartPage);
+  }
+
+  addtoCart(){
+    this.navCtrl.push(CartPage);
+    console.log();
   }
 
 }
