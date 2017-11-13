@@ -1,4 +1,4 @@
- import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -7,7 +7,9 @@ import {AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePageModule } from './../pages/home/home.module';
+import { CartPageModule } from './../pages/cart/cart.module';
+//import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { MarketPage } from '../pages/market/market';
 import { StartPage } from '../pages/start/start';
@@ -17,7 +19,7 @@ import { RegistratePage } from '../pages/registrate/registrate';
 import { CmpregistroPage } from '../pages/cmpregistro/cmpregistro';
 import { TerminosPage } from '../pages/terminos/terminos';
 import { RegistrarproductoPage } from '../pages/registrarproducto/registrarproducto';
-import { CartPage } from '../pages/cart/cart';
+//import { CartPage } from '../pages/cart/cart';  //se comenta porque se tiene que importar el cartpage.module
 import { TucuentaPage } from '../pages/tucuenta/tucuenta';
 
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
@@ -28,7 +30,7 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    //HomePage,
     LoginPage,
     MarketPage,
     StartPage,
@@ -38,20 +40,22 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
     CmpregistroPage,
     TerminosPage,
     RegistrarproductoPage,
-    CartPage,
+    //CartPage, //esto es incorrecto
     TucuentaPage,
     AutoHideDirective
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    CartPageModule, //esto es lo correcto
+    HomePageModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    //HomePage,
     LoginPage,
     MarketPage,
     StartPage,
@@ -61,7 +65,7 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
     CmpregistroPage,
     TerminosPage,
     RegistrarproductoPage,
-    CartPage,
+    //CartPage,
     TucuentaPage
   ],
   providers: [

@@ -3,8 +3,9 @@ import { ListaDeProductosService } from './../../services/lista-de-productos/lis
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegistrarproductoPage } from '../registrarproducto/registrarproducto';
-import { CartPage } from '../cart/cart';
+//import { CartPage } from '../cart/cart';
 import { Observable } from 'rxjs/Observable';
+
 
 
 @IonicPage()
@@ -41,11 +42,11 @@ export class StartPage {
   }
 
   gotoCart(){
-    this.navCtrl.push(CartPage);
+    //this.navCtrl.push(CartPage);
   }
 
   addtoCart(){
-    this.navCtrl.push(CartPage);
+    //this.navCtrl.push(CartPage);
     console.log();
   }
 

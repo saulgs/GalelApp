@@ -21,6 +21,7 @@ export class CartPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartPage');
+    console.log(this.navParams.get('item'));
   }
 
   gotoMarket(){
