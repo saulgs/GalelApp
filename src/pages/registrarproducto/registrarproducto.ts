@@ -1,3 +1,4 @@
+import { MarketPage } from './../market/market';
 import { ListaDeProductosService } from './../../services/lista-de-productos/lista-de-productos.service';
 import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
@@ -36,9 +37,8 @@ export class RegistrarproductoPage {
 
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
-      console.log(ref.key);
+      this.navCtrl.push(MarketPage, { key: ref.key } );
     })
-    this.gotoMarket()
   }
 
 }

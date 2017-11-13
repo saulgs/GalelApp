@@ -24,21 +24,43 @@
 
 
 <ion-content padding auto-hide>
-
-  <ion-card>
-    <img src="../../assets/catalogo/cartera-cuero.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Cartera de cuero
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of listaDeProductos$ | async">
+      <ion-item>
+        <ion-card>
+          <img [src]="urlImg" (click)="show()" />
+          <ion-fab right bottom>
+            <button ion-fab (click)="edit()">
+              <ion-icon name="brush"></ion-icon>
+            </button>
+          </ion-fab>
+            <div class="card-title">{{item.name}}</div>
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  
+  
+  
+<!--   
+  <ion-list>
+    <ion-card>
+      <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+          Cartera de cuero
         </ion-card-title>
-      <p>
-        Cartera de cuero hecha en Valle de Angeles
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card>
+        <p>
+          Cartera de cuero hecha en Valle de Angeles
+        </p>
+        <p>
+          Precio: $20.00
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
 
   
   <ion-card>
@@ -110,7 +132,7 @@
         Precio: $20.00
       </p>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
   
 
     <ion-fab bottom right #fab>
