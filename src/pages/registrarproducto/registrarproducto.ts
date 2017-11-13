@@ -3,6 +3,7 @@ import { ListaDeProductosService } from './../../services/lista-de-productos/lis
 import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
  
 @IonicPage()
@@ -21,11 +22,21 @@ export class RegistrarproductoPage {
     mark: ''
   };
 
+  public base64Image: string;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
-    private productos: ListaDeProductosService
+    private productos: ListaDeProductosService,
+    private camera: Camera
   ) {}
+  
+  private options: CameraOptions = {
+    quality: 100,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType: this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE
+  }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad RegistrarproductoPage');
@@ -41,4 +52,13 @@ export class RegistrarproductoPage {
     })
   }
 
+  tomarFoto(){
+    this.camera.getPicture(this.options).then((imageData) => {
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64:
+      this.base64Image = 'data:image/jpeg;base64,' + imageData;
+     }, (err) => {
+      // Handle error
+     });
+  }
 }

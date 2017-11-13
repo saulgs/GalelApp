@@ -25,6 +25,7 @@ import { TucuentaPage } from '../pages/tucuenta/tucuenta';
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
 import { ListaDeProductosService } from './../services/lista-de-productos/lista-de-productos.service';
 import { FIREBASE_CONFIG } from './firebase.credentials';
+import { Camera } from '@ionic-native/camera';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ListaDeProductosService
+    ListaDeProductosService,
+    Camera
   ]
 })
 export class AppModule {}
