@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color='primary'>
+  <ion-navbar color='galelBlue'>
     <ion-title>¡Explora en Galel!</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="gotoCart()">
@@ -19,27 +19,38 @@
 <ion-content padding auto-hide>
   
   <ion-list>
-    <ion-card *ngFor="let item of listaDeProductos$ | async" >
-      <img src="../../assets/catalogo/cartera-cuero.jpg"/>
-      <ion-card-content>
-        <ion-card-title>
-          <strong> {{item.name}} </strong>
-        </ion-card-title>
-        <p>
-          {{item.description}}
-        </p>
-        <p>
-            #<i>{{item.category}}</i>
-        </p>
-        <h4>
-          <strong> Precio: L {{item.price}} </strong>
-        </h4>
-        <button ion-item color='primary' navPush="CartPage" [navParams]="{item: item}">
-          <ion-icon name="pricetag" color='white'></ion-icon>
-          Comprar
-        </button>
-      </ion-card-content>
-    </ion-card>
+    <ion-row>
+        <ion-col *ngFor="let item of listaDeProductos$ | async">
+            <ion-card  >
+                <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+                <ion-card-content>
+                  <ion-card-title>
+                    <strong> {{item.name}} </strong>
+                  </ion-card-title>
+                  <p>
+                    {{item.description}}
+                  </p>
+                  <p>
+                      #<i>{{item.category}}</i>
+                  </p>
+                  <h4>
+                    <strong> Precio: L {{item.price}} </strong>
+                  </h4>
+                  
+                  <ion-row>
+                    <ion-col>
+                        <button ion-button medium block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">Añadir a carrito</button>              
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button medium outline block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">Añadir a favoritos</button>              
+                    </ion-col>          
+                  </ion-row>
+                </ion-card-content>
+              </ion-card>
+        </ion-col>
+    </ion-row>
+
+    
   </ion-list>
 
 <!-- 
