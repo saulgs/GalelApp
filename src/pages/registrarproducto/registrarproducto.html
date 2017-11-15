@@ -14,6 +14,12 @@
 
 
 <ion-content padding>
+  <button ion-button icon-start round item-right block color='danger' (click)="tomarFoto()">
+      <ion-icon name="camera"></ion-icon>
+      Tomar una foto
+  </button>
+  <img [src]="base64Image" *ngIf="base64Image"/>
+  <br>
   <ion-item>
     <ion-label color="dark" stacked>Nombre del producto</ion-label>
     <ion-input [(ngModel)]="item.name" type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>
@@ -62,19 +68,10 @@
     <ion-input [(ngModel)]="item.mark" type="text" placeholder="Ej: Otti"></ion-input>
   </ion-item>
   <br>
-  <button ion-button icon-start round item-right block color='danger' (click)="tomarFoto()">
-      <ion-icon name="camera"></ion-icon>
-      Tomar una foto
-  </button>
-  <br>
-  <br>
-  <br>
   
   <!-- COMENTAR ESTO 
   {{item | json}}
   -->
-
-  <img [src]="base64Image" *ngIf="base64Image"/>
   
   <a ion-button full (click)="ingresarProducto(item)"> ¡Vender! </a>
 </ion-content>

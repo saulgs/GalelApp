@@ -23,8 +23,8 @@ export class RegistrarproductoPage {
     color: '',
     mark: ''
   };
-  file: File;
-
+  
+  public file: File;
   public base64Image: string;
 
   constructor(
@@ -37,7 +37,7 @@ export class RegistrarproductoPage {
   ) {}
   
   private options: CameraOptions = {
-    quality: 100,
+    quality: 50,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
@@ -52,8 +52,8 @@ export class RegistrarproductoPage {
   }
 
   ingresarProducto(item: Item){
-    //this.firebaseStorage.addFile(this.file);
     this.productos.ingresarProducto(item).then(ref => {
+      this.firebaseStorage.addFile(this.file);
       this.toast.show(`${item.name} se ha guardado`);
       this.navCtrl.push(MarketPage, { key: ref.key } );
     })    
@@ -67,6 +67,7 @@ export class RegistrarproductoPage {
       this.file.name = this.base64Image;
      }, (err) => {
       // Handle error
+      this.toast.show(`No se pudo tomar la fotografia.`);
      });
   }
 }

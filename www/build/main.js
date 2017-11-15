@@ -211,7 +211,7 @@ var RegistrarproductoPage = (function () {
             mark: ''
         };
         this.options = {
-            quality: 100,
+            quality: 50,
             destinationType: this.camera.DestinationType.DATA_URL,
             encodingType: this.camera.EncodingType.JPEG,
             mediaType: this.camera.MediaType.PICTURE
@@ -225,8 +225,8 @@ var RegistrarproductoPage = (function () {
     };
     RegistrarproductoPage.prototype.ingresarProducto = function (item) {
         var _this = this;
-        //this.firebaseStorage.addFile(this.file);
         this.productos.ingresarProducto(item).then(function (ref) {
+            _this.firebaseStorage.addFile(_this.file);
             _this.toast.show(item.name + " se ha guardado");
             _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__market_market__["a" /* MarketPage */], { key: ref.key });
         });
@@ -240,13 +240,14 @@ var RegistrarproductoPage = (function () {
             _this.file.name = _this.base64Image;
         }, function (err) {
             // Handle error
+            _this.toast.show("No se pudo tomar la fotografia.");
         });
     };
     return RegistrarproductoPage;
 }());
 RegistrarproductoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-        selector: 'page-registrarproducto',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\registrarproducto\registrarproducto.html"*/'<!--\n\n  Generated template for the RegistrarproductoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vende tus artesanías!</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Nombre del producto</ion-label>\n\n    <ion-input [(ngModel)]="item.name" type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Descripción</ion-label>\n\n    <ion-input [(ngModel)]="item.description" type="text" placeholder="Ej: Zapatilla de cuero estilo oxford"></ion-input>\n\n  </ion-item>\n\n  <ion-list radio-group [(ngModel)]="item.category">\n\n    <ion-label color="dark" stacked>Categorías</ion-label>\n\n    <ion-item>\n\n      <ion-label>Alfareria</ion-label>\n\n      <ion-radio value=\'Alfareria\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Cueros</ion-label>\n\n      <ion-radio value=\'Cueros\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Calzado</ion-label>\n\n      <ion-radio value=\'Calzado\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Muebles</ion-label>\n\n      <ion-radio value=\'Muebles\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Carpinteria</ion-label>\n\n      <ion-radio value=\'Carpinteria\'></ion-radio>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Precio</ion-label>\n\n    <ion-input [(ngModel)]="item.price" type="number" placeholder="Ej: 130.00"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Cantidad</ion-label>\n\n    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="Ej: 5"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Color</ion-label>\n\n    <ion-input [(ngModel)]="item.color" type="text" placeholder="Ej: café"></ion-input>\n\n  </ion-item>\n\n   <ion-item>\n\n    <ion-label color="dark" stacked>Marca</ion-label>\n\n    <ion-input [(ngModel)]="item.mark" type="text" placeholder="Ej: Otti"></ion-input>\n\n  </ion-item>\n\n  <br>\n\n  <button ion-button icon-start round item-right block color=\'danger\' (click)="tomarFoto()">\n\n      <ion-icon name="camera"></ion-icon>\n\n      Tomar una foto\n\n  </button>\n\n  <br>\n\n  <br>\n\n  <br>\n\n  \n\n  <!-- COMENTAR ESTO \n\n  {{item | json}}\n\n  -->\n\n\n\n  <img [src]="base64Image" *ngIf="base64Image"/>\n\n  \n\n  <a ion-button full (click)="ingresarProducto(item)"> ¡Vender! </a>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\registrarproducto\registrarproducto.html"*/,
+        selector: 'page-registrarproducto',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\registrarproducto\registrarproducto.html"*/'<!--\n\n  Generated template for the RegistrarproductoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vende tus artesanías!</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <button ion-button icon-start round item-right block color=\'danger\' (click)="tomarFoto()">\n\n      <ion-icon name="camera"></ion-icon>\n\n      Tomar una foto\n\n  </button>\n\n  <img [src]="base64Image" *ngIf="base64Image"/>\n\n  <br>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Nombre del producto</ion-label>\n\n    <ion-input [(ngModel)]="item.name" type="text" placeholder="Ej: Zapatilla formal Otti"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Descripción</ion-label>\n\n    <ion-input [(ngModel)]="item.description" type="text" placeholder="Ej: Zapatilla de cuero estilo oxford"></ion-input>\n\n  </ion-item>\n\n  <ion-list radio-group [(ngModel)]="item.category">\n\n    <ion-label color="dark" stacked>Categorías</ion-label>\n\n    <ion-item>\n\n      <ion-label>Alfareria</ion-label>\n\n      <ion-radio value=\'Alfareria\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Cueros</ion-label>\n\n      <ion-radio value=\'Cueros\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Calzado</ion-label>\n\n      <ion-radio value=\'Calzado\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Muebles</ion-label>\n\n      <ion-radio value=\'Muebles\'></ion-radio>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Carpinteria</ion-label>\n\n      <ion-radio value=\'Carpinteria\'></ion-radio>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Precio</ion-label>\n\n    <ion-input [(ngModel)]="item.price" type="number" placeholder="Ej: 130.00"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Cantidad</ion-label>\n\n    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="Ej: 5"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="dark" stacked>Color</ion-label>\n\n    <ion-input [(ngModel)]="item.color" type="text" placeholder="Ej: café"></ion-input>\n\n  </ion-item>\n\n   <ion-item>\n\n    <ion-label color="dark" stacked>Marca</ion-label>\n\n    <ion-input [(ngModel)]="item.mark" type="text" placeholder="Ej: Otti"></ion-input>\n\n  </ion-item>\n\n  <br>\n\n  \n\n  <!-- COMENTAR ESTO \n\n  {{item | json}}\n\n  -->\n\n  \n\n  <a ion-button full (click)="ingresarProducto(item)"> ¡Vender! </a>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\registrarproducto\registrarproducto.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavParams */],
@@ -496,27 +497,27 @@ var map = {
 		7
 	],
 	"../pages/more/more.module": [
-		539,
+		540,
 		6
 	],
 	"../pages/preferences/preferences.module": [
-		540,
+		539,
 		5
 	],
 	"../pages/registrarproducto/registrarproducto.module": [
-		541,
+		544,
 		4
 	],
 	"../pages/start/start.module": [
-		542,
+		541,
 		3
 	],
 	"../pages/terminos/terminos.module": [
-		543,
+		542,
 		2
 	],
 	"../pages/tucuenta/tucuenta.module": [
-		544,
+		543,
 		1
 	]
 };
@@ -967,12 +968,12 @@ AppModule = __decorate([
                     { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/cuentausuario/cuentausuario.module#CuentausuarioPageModule', name: 'CuentausuarioPage', segment: 'cuentausuario', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/market/market.module#MarketPageModule', name: 'MarketPage', segment: 'market', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/more/more.module#MorePageModule', name: 'MorePage', segment: 'more', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/preferences/preferences.module#PreferencesPageModule', name: 'PreferencesPage', segment: 'preferences', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/registrarproducto/registrarproducto.module#RegistrarproductoPageModule', name: 'RegistrarproductoPage', segment: 'registrarproducto', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/more/more.module#MorePageModule', name: 'MorePage', segment: 'more', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/start/start.module#StartPageModule', name: 'StartPage', segment: 'start', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/terminos/terminos.module#TerminosPageModule', name: 'TerminosPage', segment: 'terminos', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tucuenta/tucuenta.module#TucuentaPageModule', name: 'TucuentaPage', segment: 'tucuenta', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tucuenta/tucuenta.module#TucuentaPageModule', name: 'TucuentaPage', segment: 'tucuenta', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/registrarproducto/registrarproducto.module#RegistrarproductoPageModule', name: 'RegistrarproductoPage', segment: 'registrarproducto', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_9__pages_cart_cart_module__["CartPageModule"],
