@@ -27,6 +27,8 @@ import { ListaDeProductosService } from './../services/lista-de-productos/lista-
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { Camera } from '@ionic-native/camera';
 import { ToastService } from './../services/toast/toast.service';
+import { FirebaseStorage } from '../services/firebase-storage/firebase-storage.service';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { ToastService } from './../services/toast/toast.service';
     CartPageModule, //esto es lo correcto
     HomePageModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -76,7 +79,8 @@ import { ToastService } from './../services/toast/toast.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListaDeProductosService,
     Camera,
-    ToastService
+    ToastService,
+    FirebaseStorage
   ]
 })
 export class AppModule {}

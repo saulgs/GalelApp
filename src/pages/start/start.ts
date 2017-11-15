@@ -20,8 +20,8 @@ export class StartPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
-    private productos: ListaDeProductosService,
-    private toast: ToastService
+    private productos: ListaDeProductosService
+    //private toast: ToastService
   ) { 
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
