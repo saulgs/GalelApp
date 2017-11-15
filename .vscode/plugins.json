@@ -1,1 +1,1 @@
-{"plugins":["ionic-plugin-keyboard","cordova-plugin-whitelist","cordova-plugin-device","cordova-plugin-splashscreen","cordova-plugin-ionic-webview","cordova-plugin-statusbar"]}
+{"plugins":["ionic-plugin-keyboard","cordova-plugin-whitelist","cordova-plugin-device","cordova-plugin-splashscreen","cordova-plugin-ionic-webview","cordova-plugin-statusbar","cordova-plugin-camera"]}
