@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { App } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
 import { TucuentaPage } from '../tucuenta/tucuenta';
+import { AccountLoginPage} from '../account-login/account-login'
 
 /**
  * Generated class for the MorePage page.
@@ -37,6 +37,6 @@ export class MorePage {
    * 
    *  this.app.getRootNav().setRoot(LoginPage, {}, {animate: true, direction: 'forward'});
    */
-    this.app.getRootNavs()[0].setRoot(LoginPage, {}, {animate: true, direction: 'forward'});
+    this.app.getRootNavs()[0].setRoot(AccountLoginPage, {}, {animate: true, direction: 'forward'});
   }
 }

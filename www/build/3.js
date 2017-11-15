@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 445:
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartPageModule", function() { return StartPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrarproductoPageModule", function() { return RegistrarproductoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__start__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registrarproducto__ = __webpack_require__(143);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var StartPageModule = (function () {
-    function StartPageModule() {
+var RegistrarproductoPageModule = (function () {
+    function RegistrarproductoPageModule() {
     }
-    return StartPageModule;
+    return RegistrarproductoPageModule;
 }());
-StartPageModule = __decorate([
+RegistrarproductoPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__start__["a" /* StartPage */],
+            __WEBPACK_IMPORTED_MODULE_2__registrarproducto__["a" /* RegistrarproductoPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__start__["a" /* StartPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__registrarproducto__["a" /* RegistrarproductoPage */]),
         ],
     })
-], StartPageModule);
+], RegistrarproductoPageModule);
 
-//# sourceMappingURL=start.module.js.map
+//# sourceMappingURL=registrarproducto.module.js.map
 
 /***/ })
 

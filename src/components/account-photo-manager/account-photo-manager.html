@@ -1,0 +1,23 @@
+<progress *ngIf="pct>0&&pct<100" class="progress is-dark" value="{{pct}}" max="100">{{pct}}%</progress>
+<div style="padding-top: 6.5%;">
+</div>
+
+<ion-row>
+  <ion-col width-33 text-center>
+    <div class="circular tools" >
+      <button (tap)="picFromCamera()" [disabled]="pct>0&&pct<100">
+        <ion-icon ios="ios-camera-outline" md="ios-camera-outline"></ion-icon>
+      </button>
+    </div>
+  </ion-col>
+  <ion-col width-33 text-center>
+    <account-avatar [photo64]="photo64" [photoURL]="profile?.photoURL" [hideName]="true"></account-avatar>
+  </ion-col>
+  <ion-col width-33 text-center>
+    <div class="circular tools">
+      <button (tap)="picFromDevice()" [disabled]="pct>0&&pct<100">
+        <ion-icon ios="ios-folder-open-outline" md="ios-folder-open-outline"></ion-icon>
+      </button>
+    </div>
+  </ion-col>
+</ion-row>
