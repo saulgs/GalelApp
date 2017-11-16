@@ -54,9 +54,10 @@ export class RegistrarproductoPage {
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
       //this.toast.show(`${item.name} se ha guardado`);
-      this.storage.uploadImage(ref.key, this.base64Image);
-      item.image = this.storage.getUrl();
-      this.productos.editarProducto(ref.key, item);
+      this.storage.uploadImage(ref.key, this.base64Image).then((snapshot) => {
+        item.image = this.storage.getUrl();
+        this.productos.editarProducto(ref.key, item);
+      });
       //this.storage.getImage(ref.key).then( url => {
         //item.image = url;
       //}); 
