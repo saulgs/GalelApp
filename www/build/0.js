@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 460:
+/***/ 464:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,7 +74,7 @@ var CuentausuarioPage = (function () {
 }());
 CuentausuarioPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-cuentausuario',template:/*ion-inline-start:"C:\Brizo Projects\Proyecto Economia\src\pages\cuentausuario\cuentausuario.html"*/'<!--\n\n  Generated template for the CuentausuarioPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cuentausuario</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Brizo Projects\Proyecto Economia\src\pages\cuentausuario\cuentausuario.html"*/,
+        selector: 'page-cuentausuario',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\cuentausuario\cuentausuario.html"*/'<!--\n\n  Generated template for the CuentausuarioPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cuentausuario</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\cuentausuario\cuentausuario.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
 ], CuentausuarioPage);
