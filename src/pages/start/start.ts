@@ -9,7 +9,6 @@ import { CartPage } from '../cart/cart';
 import { Observable } from 'rxjs/Observable';
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-start',
@@ -18,13 +17,19 @@ import { Observable } from 'rxjs/Observable';
 export class StartPage {
 
   listaDeProductos$: Observable<Item[]>;
+  searchQuery: string = '';
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams, 
     private productos: ListaDeProductosService,
     private toast: ToastService,
     private storage: FirebaseStorageService
-  ) { 
+    ) { 
+    this.initializeItems();
+    }
+
+  initializeItems(){
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
     .snapshotChanges() // Los datos de forma (llave, valor)
@@ -36,7 +41,6 @@ export class StartPage {
       }
     )
     //this.toast.show(`Se han actualizado los productos.`);
-
   }
 
   ionViewDidLoad() {
@@ -55,6 +59,21 @@ export class StartPage {
   addtoCart(){
     //this.navCtrl.push(CartPage);
     console.log();
+  }
+
+  getItems(ev: any){
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the searchbar
+    let val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.listaDeProductos$ = this.listaDeProductos$.filter((Item) => {
+        return (Item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
   }
 
 }
