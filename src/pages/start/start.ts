@@ -70,8 +70,8 @@ export class StartPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.listaDeProductos$ = this.listaDeProductos$.filter((Item) => {
-        return (Item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.listaDeProductos$ = this.listaDeProductos$.filter((name) => {
+        return (name.toString().toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
