@@ -1,0 +1,43 @@
+account-signup-page {
+    .content {
+        background-color: transparent;
+        background-image: linear-gradient($bg-primary);
+    }
+    .footer-login-font {
+        opacity: .8;
+        a {
+            color: #fff;
+            text-decoration: none;
+            /* no underline */
+        }
+    }
+    .login-form {
+        padding-top: 5px;
+        margin-left: 4%;
+        font-weight: 200;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: transparent;
+        .item-inner {
+            border-bottom: 0px !important;
+        }
+        ion-range {
+            padding: 8px 12px 4px 0px;
+        }
+        ion-label[stacked] {
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+        ion-toggle {
+            margin: 0% 15% !important;
+            padding: 0px !important;
+        }
+        input::-webkit-input-placeholder {
+            color: inherit;
+            font-size: 1.3rem;
+        }
+    }
+}

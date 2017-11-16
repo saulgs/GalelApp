@@ -1,0 +1,23 @@
+<form #loginForm="ngForm" novalidate>
+  <ion-list>
+    <ion-item class="login-form">
+      <ion-label frost stacked color="light">CORREO</ion-label>
+      <ion-icon ios="ios-contact-outline" md="md-contact" item-left frost color="light"></ion-icon>
+      <ion-input type="email" [(ngModel)]="login.email" name="username" #email="ngModel" spellcheck="false" autocapitalize="off"
+        required placeholder="Digite su correo para recibir una confirmación" color="light"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button large outline block round (tap)="onForgot(loginForm)" color="light">Cambiar Contraseña</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <account-login-social></account-login-social>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

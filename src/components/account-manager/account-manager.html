@@ -1,0 +1,22 @@
+<div padding-top text-center>
+  <ion-list>
+    <button ion-item (tap)="changeName()">Cambiar Nombre</button>
+    <button ion-item (tap)="changeEmail()">Cambiar Correo</button>
+    <button ion-item (tap)="changePassword()">Cambiar Contraseña</button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Otras opciones
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Notificaciones</ion-label>
+      <ion-toggle color="secondary"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list inset>
+    <button ion-button (tap)="deleteAccount()" color="danger" outline>Eliminar Cuenta</button>
+  </ion-list>
+
+</div>

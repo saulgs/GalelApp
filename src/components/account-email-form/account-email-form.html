@@ -1,0 +1,18 @@
+<form #accountForm="ngForm" novalidate>
+  <ion-list>
+    <ion-item>
+      <ion-label frost stacked color="dark">Email</ion-label>
+      <ion-icon ios="ios-contact-outline" md="md-contact" item-left frost color="dark"></ion-icon>
+      <ion-input [(ngModel)]="account.email" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+        required placeholder="Your new email" color="dark"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button large outline block round (tap)="onModify(accountForm)" color="dark">Modify</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

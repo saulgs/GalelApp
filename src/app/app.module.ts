@@ -9,17 +9,13 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import { MyApp } from './app.component';
 import { HomePageModule } from './../pages/home/home.module';
 import { CartPageModule } from './../pages/cart/cart.module';
-//import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { MarketPage } from '../pages/market/market';
 import { StartPage } from '../pages/start/start';
 import { PreferencesPage } from '../pages/preferences/preferences';
 import { MorePage } from '../pages/more/more';
 import { RegistratePage } from '../pages/registrate/registrate';
-import { CmpregistroPage } from '../pages/cmpregistro/cmpregistro';
-import { TerminosPage } from '../pages/terminos/terminos';
 import { RegistrarproductoPage } from '../pages/registrarproducto/registrarproducto';
-//import { CartPage } from '../pages/cart/cart';  //se comenta porque se tiene que importar el cartpage.module
 import { TucuentaPage } from '../pages/tucuenta/tucuenta';
 
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
@@ -30,21 +26,27 @@ import { ToastService } from './../services/toast/toast.service';
 import { FirebaseStorage } from '../services/firebase-storage/firebase-storage.service';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+//@Brizo
+import { AccountNameModule } from '../pages/account-name/account-name.module';
+import { AccountEmailModule } from '../pages/account-email/account-email.module';
+import { AccountPasswordModule } from '../pages/account-password/account-password.module';
+import { AccountLoginModule } from '../pages/account-login/account-login.module';
+import { AccountSignupModule } from '../pages/account-signup/account-signup.module';
+import { AccountForgotModule } from '../pages/account-forgot/account-forgot.module';
+import { TermsAndConditionsModule } from './../pages/terms-conditions/terms-conditions.module';  //@Brizo, lo cambié
+
+
 
 @NgModule({
   declarations: [
     MyApp,
-    //HomePage,
     LoginPage,
     MarketPage,
     StartPage,
     PreferencesPage,
     MorePage,
     RegistratePage,
-    CmpregistroPage,
-    TerminosPage,
     RegistrarproductoPage,
-    //CartPage, //esto es incorrecto
     TucuentaPage,
     AutoHideDirective
   ],
@@ -55,22 +57,28 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     HomePageModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
+<<<<<<< HEAD
     AngularFirestoreModule
+=======
+    AccountNameModule,      //@Brizo
+    AccountEmailModule,     //@Brizo
+    AccountPasswordModule,  //@Brizo
+    AccountLoginModule,     //@Brizo
+    AccountSignupModule,    //@Brizo
+    AccountForgotModule,     //@Brizo
+    TermsAndConditionsModule
+>>>>>>> master
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    //HomePage,
     LoginPage,
     MarketPage,
     StartPage,
     PreferencesPage,
     MorePage,
     RegistratePage,
-    CmpregistroPage,
-    TerminosPage,
     RegistrarproductoPage,
-    //CartPage,
     TucuentaPage
   ],
   providers: [

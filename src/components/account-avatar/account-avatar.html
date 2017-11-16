@@ -1,0 +1,12 @@
+<ion-grid>
+  <ion-row>
+    <ion-col class="h-center">
+      <img class="circular" [src]="photo64||photoURL||blank">
+    </ion-col>
+  </ion-row>
+  <ion-row [hidden]="hideName">
+    <ion-col class="h-center">
+      <span>{{profile?.displayName}}</span>
+    </ion-col>
+  </ion-row>
+</ion-grid>

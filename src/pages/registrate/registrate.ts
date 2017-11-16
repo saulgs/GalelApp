@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { CmpregistroPage } from '../cmpregistro/cmpregistro';
-
-/**
- * Generated class for the RegistratePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TermsAndConditionsPage } from '../terms-conditions/terms-conditions';
 
 
 @Component({
@@ -20,7 +13,7 @@ export class RegistratePage {
   }
 
   gotoCompletar(){
-    this.navCtrl.push(CmpregistroPage);
+    this.navCtrl.push(TermsAndConditionsPage);
   }
 
   ionViewDidLoad() {
