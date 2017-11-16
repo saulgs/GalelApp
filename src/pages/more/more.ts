@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { App } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TucuentaPage } from '../tucuenta/tucuenta';
+import { TufavPage } from '../tufav/tufav';
+import { TulistaPage } from '../tulista/tulista';
+import { TuordenPage } from '../tuorden/tuorden';
 import { AccountLoginPage} from '../account-login/account-login'
 
 /**
@@ -29,6 +32,17 @@ export class MorePage {
     this.navCtrl.push(TucuentaPage);
   }
 
+  gotoFav(){
+    this.navCtrl.push(TufavPage);
+  }
+
+  gotoLista(){
+    this.navCtrl.push(TulistaPage);
+  }
+
+  gotoOrden(){
+    this.navCtrl.push(TuordenPage);
+  }
   
   gotoLogin(){
    console.log(this.app.getRootNavs()[0]);

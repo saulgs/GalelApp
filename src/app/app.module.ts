@@ -17,6 +17,10 @@ import { MorePage } from '../pages/more/more';
 import { RegistratePage } from '../pages/registrate/registrate';
 import { RegistrarproductoPage } from '../pages/registrarproducto/registrarproducto';
 import { TucuentaPage } from '../pages/tucuenta/tucuenta';
+import { TufavPage } from '../pages/tufav/tufav';
+import { TulistaPage } from '../pages/tulista/tulista';
+import { TuordenPage } from '../pages/tuorden/tuorden';
+
 
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
 import { ListaDeProductosService } from './../services/lista-de-productos/lista-de-productos.service';
@@ -47,6 +51,9 @@ import { FirebaseStorageService } from '../services/firebase-storage/firebase-st
     RegistratePage,
     RegistrarproductoPage,
     TucuentaPage,
+    TufavPage,
+    TulistaPage,
+    TuordenPage,
     AutoHideDirective
   ],
   imports: [
@@ -74,7 +81,10 @@ import { FirebaseStorageService } from '../services/firebase-storage/firebase-st
     MorePage,
     RegistratePage,
     RegistrarproductoPage,
-    TucuentaPage
+    TucuentaPage,
+    TulistaPage,
+    TufavPage,
+    TuordenPage
   ],
   providers: [
     StatusBar,
