@@ -53,14 +53,15 @@ export class RegistrarproductoPage {
 
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
-      this.toast.show(`${item.name} se ha guardado`);
+      //this.toast.show(`${item.name} se ha guardado`);
       this.storage.uploadImage(ref.key, this.base64Image);
-      this.storage.getImage(ref.key).then( function(url) {
-        item.image = url;
-        this.toast.show(url);
-      }); 
+      item.image = this.storage.getUrl();
+      this.productos.editarProducto(ref.key, item);
+      //this.storage.getImage(ref.key).then( url => {
+        //item.image = url;
+      //}); 
       this.navCtrl.push(MarketPage, { key: ref.key } );
-    })
+    });
   }
 
   tomarFoto(){

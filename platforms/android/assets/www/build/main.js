@@ -4,67 +4,11 @@ webpackJsonp([7],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountForgotPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_login_account_login__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_signup_account_signup__ = __webpack_require__(114);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the AccountForgotPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var AccountForgotPage = (function () {
-    function AccountForgotPage(app, navCtrl, navParams) {
-        this.app = app;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AccountForgotPage.prototype.ionViewDidEnter = function () {
-        this.app.setTitle('Forgot Password');
-    };
-    AccountForgotPage.prototype.onSignup = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__account_signup_account_signup__["a" /* AccountSignupPage */]);
-    };
-    AccountForgotPage.prototype.onLogin = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__account_login_account_login__["a" /* AccountLoginPage */]);
-    };
-    return AccountForgotPage;
-}());
-AccountForgotPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'account-forgot-page',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\account-forgot\account-forgot.html"*/'<ion-header>\n\n  <ion-navbar color="galelBlue">\n\n    <ion-title>RECUPERAR CONTRASEÑA</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <account-forgot-form></account-forgot-form>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <div class="footer-login-font" text-center padding>\n\n    Ya tienes cuenta en GALEL? <a (click)="onLogin()"> INGRESAR</a>  -  <a (click)="onSignup()"> REGISTRARME</a>\n\n  </div>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\account-forgot\account-forgot.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
-], AccountForgotPage);
-
-//# sourceMappingURL=account-forgot.js.map
-
-/***/ }),
-
-/***/ 114:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountSignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_login_account_login__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_forgot_account_forgot__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_forgot_account_forgot__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,13 +56,69 @@ AccountSignupPage = __decorate([
 
 /***/ }),
 
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountForgotPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_login_account_login__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_signup_account_signup__ = __webpack_require__(113);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the AccountForgotPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var AccountForgotPage = (function () {
+    function AccountForgotPage(app, navCtrl, navParams) {
+        this.app = app;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AccountForgotPage.prototype.ionViewDidEnter = function () {
+        this.app.setTitle('Forgot Password');
+    };
+    AccountForgotPage.prototype.onSignup = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__account_signup_account_signup__["a" /* AccountSignupPage */]);
+    };
+    AccountForgotPage.prototype.onLogin = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__account_login_account_login__["a" /* AccountLoginPage */]);
+    };
+    return AccountForgotPage;
+}());
+AccountForgotPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'account-forgot-page',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\account-forgot\account-forgot.html"*/'<ion-header>\n\n  <ion-navbar color="galelBlue">\n\n    <ion-title>RECUPERAR CONTRASEÑA</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <account-forgot-form></account-forgot-form>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <div class="footer-login-font" text-center padding>\n\n    Ya tienes cuenta en GALEL? <a (click)="onLogin()"> INGRESAR</a>  -  <a (click)="onSignup()"> REGISTRARME</a>\n\n  </div>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\account-forgot\account-forgot.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+], AccountForgotPage);
+
+//# sourceMappingURL=account-forgot.js.map
+
+/***/ }),
+
 /***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirebaseStorageService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -135,19 +135,39 @@ var FirebaseStorageService = (function () {
     //private ReferenciaFirebaseStorage = firebase.storage().ref();
     function FirebaseStorageService() {
     }
-    FirebaseStorageService.prototype.uploadImage = function (key, imageString) {
-        var image = 'p_' + key + '.jpg', storageRef, parseUpload;
-        return new Promise(function (resolve, reject) {
-            storageRef = __WEBPACK_IMPORTED_MODULE_1_firebase__["storage"]().ref('products/' + image);
-            parseUpload = storageRef.putString(imageString, 'data_url');
-            parseUpload.on('state_changed', function (_snapshot) {
+    /*
+       uploadImage(key: string, imageString: string) : Promise<any>
+       {
+          let image       : string  = 'p_' + key + '.jpg',
+              storageRef  : any,
+              parseUpload : any;
+    
+          return new Promise((resolve, reject) => {
+             storageRef  = firebase.storage().ref('products/' + image);
+             parseUpload = storageRef.putString(imageString, 'data_url');
+    
+             parseUpload.on('state_changed', (_snapshot) =>
+             {
                 // We could log the progress here IF necessary
-                console.log('snapshot progess ' + _snapshot);
-            }, function (_err) {
+                //console.log('snapshot progess ' + _snapshot);
+                
+             },
+             (_err) =>
+             {
                 reject(_err);
-            }, function (success) {
+             },
+             (success) =>
+             {
                 resolve(parseUpload.snapshot);
-            });
+                return parseUpload.snapshot.downloadURL;
+             });
+          });
+       }
+   */
+    FirebaseStorageService.prototype.uploadImage = function (key, imageString) {
+        var image = 'p_' + key + '.jpg';
+        __WEBPACK_IMPORTED_MODULE_1_firebase__["storage"]().ref('products/' + image).putString(imageString, 'data_url').then(function (snapshot) {
+            console.log('Uploaded a data_url string!');
         });
     };
     FirebaseStorageService.prototype.getImage = function (key) {
@@ -156,6 +176,7 @@ var FirebaseStorageService = (function () {
             // `url` is the download URL for the image          
             // Inserted into an <img> element:
             //var img = document.getElementById('myimg');
+            console.log(url);
             return url;
         }).catch(function (error) {
             // Handle any errors
@@ -221,7 +242,7 @@ ToastService = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaDeProductosService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angularfire2_database__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angularfire2_database__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -307,7 +328,7 @@ TermsAndConditionsPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__registrarproducto_registrarproducto__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_cart__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_cart__ = __webpack_require__(270);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -345,10 +366,11 @@ var StartPage = (function () {
             .map(function (changes) {
             return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
         });
-        this.toast.show("Se han actualizado los productos.");
+        //this.toast.show(`Se han actualizado los productos.`);
     }
     StartPage.prototype.ionViewDidLoad = function () {
         //console.log('ionViewDidLoad StartPage');
+        //console.log(item.image);
     };
     StartPage.prototype.gotoRegistrarProducto = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__registrarproducto_registrarproducto__["a" /* RegistrarproductoPage */]);
@@ -364,7 +386,7 @@ var StartPage = (function () {
 }());
 StartPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-        selector: 'page-start',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/'<ion-header>\n\n  <ion-navbar color=\'galelBlue\'>\n\n    <ion-title>¡Explora en Galel!</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="gotoCart()">\n\n        <ion-icon name="md-cart"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar \n\n  animated="true"\n\n  autocomplete="on"\n\n  placeholder=\'Buscar aqui\'\n\n  [showCancelButton]="shouldShowCancel">\n\n  </ion-searchbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding auto-hide>\n\n  \n\n  <ion-list>\n\n    <ion-row>\n\n        <ion-col *ngFor="let item of listaDeProductos$ | async">\n\n            <ion-card  >\n\n                <img src="item.image"/>\n\n                <ion-card-content>\n\n                  <ion-card-title>\n\n                    <strong> {{item.name}} </strong>\n\n                  </ion-card-title>\n\n                  <p>\n\n                    {{item.description}}\n\n                  </p>\n\n                  <p>\n\n                      #<i>{{item.category}}</i>\n\n                  </p>\n\n                  <h4>\n\n                    <strong> Precio: L {{item.price}} </strong>\n\n                  </h4>\n\n                  \n\n                  <ion-row>\n\n                    <ion-col>\n\n                        <button ion-button medium block round color=\'galelOrange\' navPush="CartPage" [navParams]="{item: item}">Añadir a carrito</button>              \n\n                    </ion-col>\n\n                    <ion-col>\n\n                        <button ion-button medium outline block round color=\'galelOrange\' navPush="CartPage" [navParams]="{item: item}">Añadir a favoritos</button>              \n\n                    </ion-col>          \n\n                  </ion-row>\n\n                </ion-card-content>\n\n              </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n\n\n    \n\n  </ion-list>\n\n\n\n<!-- \n\n  \n\n  <ion-card>\n\n    <img src="../../assets/catalogo/ceramica-lenca.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Jarron lenca\n\n        </ion-card-title>\n\n      <p>\n\n        Jarron de cerammica lenca hecho en Guajiquiro, La Paz\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/ceramica-maya.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Jarron Maya\n\n        </ion-card-title>\n\n      <p>\n\n        Jarron maya hecho en Santa Rosa de Copan\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/cofre-madera.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Cofre de madera\n\n        </ion-card-title>\n\n      <p>\n\n        Cofre de madera hecho en Ojojona, FM\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/hamacas.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Hamaca\n\n        </ion-card-title>\n\n      <p>\n\n        Hamaca hecha en San Antonio de Oriente, FM\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/sandalias-cuero.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Sandalias de cuero\n\n        </ion-card-title>\n\n      <p>\n\n        Sandalias de cuero hecha en Valle de Angeles\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card> -->\n\n  \n\n\n\n    <ion-fab bottom right #fab>\n\n      <a ion-fab color=\'secondary\' (click)="gotoRegistrarProducto()">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </a>\n\n    </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/,
+        selector: 'page-start',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/'<ion-header>\n\n  <ion-navbar color=\'galelBlue\'>\n\n    <ion-title>¡Explora en Galel!</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="gotoCart()">\n\n        <ion-icon name="md-cart"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar \n\n  animated="true"\n\n  autocomplete="on"\n\n  placeholder=\'Buscar aqui\'\n\n  [showCancelButton]="shouldShowCancel">\n\n  </ion-searchbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding auto-hide>\n\n  \n\n  <ion-list>\n\n    <ion-row>\n\n        <ion-col *ngFor="let item of listaDeProductos$ | async">\n\n            <ion-card  >\n\n                <img [src]="item.image"/>\n\n                <ion-card-content>\n\n                  <ion-card-title>\n\n                    <strong> {{item.name}} </strong>\n\n                  </ion-card-title>\n\n                  <p>\n\n                    {{item.description}}\n\n                  </p>\n\n                  <p>\n\n                      #<i>{{item.category}}</i>\n\n                  </p>\n\n                  <h4>\n\n                    <strong> Precio: L {{item.price}} </strong>\n\n                  </h4>\n\n                  \n\n                  <ion-row>\n\n                    <ion-col>\n\n                        <button ion-button medium block round color=\'galelOrange\' navPush="CartPage" [navParams]="{item: item}">Añadir a carrito</button>              \n\n                    </ion-col>\n\n                    <ion-col>\n\n                        <button ion-button medium outline block round color=\'galelOrange\' navPush="CartPage" [navParams]="{item: item}">Añadir a favoritos</button>              \n\n                    </ion-col>          \n\n                  </ion-row>\n\n                </ion-card-content>\n\n              </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n\n\n    \n\n  </ion-list>\n\n\n\n<!-- \n\n  \n\n  <ion-card>\n\n    <img src="../../assets/catalogo/ceramica-lenca.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Jarron lenca\n\n        </ion-card-title>\n\n      <p>\n\n        Jarron de cerammica lenca hecho en Guajiquiro, La Paz\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/ceramica-maya.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Jarron Maya\n\n        </ion-card-title>\n\n      <p>\n\n        Jarron maya hecho en Santa Rosa de Copan\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/cofre-madera.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Cofre de madera\n\n        </ion-card-title>\n\n      <p>\n\n        Cofre de madera hecho en Ojojona, FM\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/hamacas.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Hamaca\n\n        </ion-card-title>\n\n      <p>\n\n        Hamaca hecha en San Antonio de Oriente, FM\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <img src="../../assets/catalogo/sandalias-cuero.jpg"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Sandalias de cuero\n\n        </ion-card-title>\n\n      <p>\n\n        Sandalias de cuero hecha en Valle de Angeles\n\n      </p>\n\n      <p>\n\n        Precio: $20.00\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card> -->\n\n  \n\n\n\n    <ion-fab bottom right #fab>\n\n      <a ion-fab color=\'secondary\' (click)="gotoRegistrarProducto()">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </a>\n\n    </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* NavParams */],
@@ -387,7 +409,7 @@ StartPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_lista_de_productos_lista_de_productos_service__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_firebase_storage_firebase_storage_service__ = __webpack_require__(115);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -439,11 +461,11 @@ var RegistrarproductoPage = (function () {
     RegistrarproductoPage.prototype.ingresarProducto = function (item) {
         var _this = this;
         this.productos.ingresarProducto(item).then(function (ref) {
-            _this.toast.show(item.name + " se ha guardado");
+            //this.toast.show(`${item.name} se ha guardado`);
             _this.storage.uploadImage(ref.key, _this.base64Image);
             _this.storage.getImage(ref.key).then(function (url) {
                 item.image = url;
-                this.toast.show(url);
+                _this.toast.show(url);
             });
             _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__market_market__["a" /* MarketPage */], { key: ref.key });
         });
@@ -659,7 +681,7 @@ var map = {
 		213
 	],
 	"../pages/account-forgot/account-forgot.module": [
-		214
+		271
 	],
 	"../pages/account-login/account-login.module": [
 		72
@@ -770,56 +792,7 @@ AccountEmailModule = __decorate([
 
 /***/ }),
 
-/***/ 214:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountForgotModule", function() { return AccountForgotModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_forgot__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__account_login_account_login_module__ = __webpack_require__(72);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-var AccountForgotModule = (function () {
-    function AccountForgotModule() {
-    }
-    return AccountForgotModule;
-}());
-AccountForgotModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */],
-            __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_4__account_login_account_login_module__["AccountLoginModule"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */]),
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */])
-        ],
-        exports: [
-            __WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */],
-            __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */]
-        ]
-    })
-], AccountForgotModule);
-
-//# sourceMappingURL=account-forgot.module.js.map
-
-/***/ }),
-
-/***/ 271:
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -867,6 +840,55 @@ CartPage = __decorate([
 ], CartPage);
 
 //# sourceMappingURL=cart.js.map
+
+/***/ }),
+
+/***/ 271:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountForgotModule", function() { return AccountForgotModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_forgot__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__ = __webpack_require__(482);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__account_login_account_login_module__ = __webpack_require__(72);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var AccountForgotModule = (function () {
+    function AccountForgotModule() {
+    }
+    return AccountForgotModule;
+}());
+AccountForgotModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */],
+            __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_4__account_login_account_login_module__["AccountLoginModule"],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */])
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__account_forgot__["a" /* AccountForgotPage */],
+            __WEBPACK_IMPORTED_MODULE_3__components_account_forgot_form_account_forgot_form__["a" /* AccountForgotFormComponent */]
+        ]
+    })
+], AccountForgotModule);
+
+//# sourceMappingURL=account-forgot.module.js.map
 
 /***/ }),
 
@@ -970,7 +992,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountSignupModule", function() { return AccountSignupModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_signup__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_signup__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_account_signup_form_account_signup_form__ = __webpack_require__(487);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__account_login_account_login_module__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1019,7 +1041,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(270);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1208,7 +1230,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(505);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home_module__ = __webpack_require__(506);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cart_cart_module__ = __webpack_require__(275);
@@ -1223,14 +1245,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__directives_auto_hide_auto_hide__ = __webpack_require__(508);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_lista_de_productos_lista_de_productos_service__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__firebase_credentials__ = __webpack_require__(509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_camera__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_camera__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toast_toast_service__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_account_name_account_name_module__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_account_email_account_email_module__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_account_password_account_password_module__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_account_login_account_login_module__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_account_signup_account_signup_module__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_account_forgot_account_forgot_module__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_account_forgot_account_forgot_module__ = __webpack_require__(271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_terms_conditions_terms_conditions_module__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__services_firebase_storage_firebase_storage_service__ = __webpack_require__(115);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1295,8 +1317,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/account-email/account-email.module#AccountEmailModule', name: 'AccountEmailPage', segment: 'account-email', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/account-forgot/account-forgot.module#AccountForgotModule', name: 'AccountForgotPage', segment: 'account-forgot', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/account-login/account-login.module#AccountLoginModule', name: 'AccountLoginPage', segment: 'account-login', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/account-forgot/account-forgot.module#AccountForgotModule', name: 'AccountForgotPage', segment: 'account-forgot', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/account-name/account-name.module#AccountNameModule', name: 'AccountNamePage', segment: 'account-name', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/account-password/account-password.module#AccountPasswordModule', name: 'AccountPasswordPage', segment: 'account-password', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/account-signup/account-signup.module#AccountSignupModule', name: 'AccountSignupPage', segment: 'account-signup', priority: 'low', defaultHistory: [] },
@@ -1307,8 +1329,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/preferences/preferences.module#PreferencesPageModule', name: 'PreferencesPage', segment: 'preferences', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/registrarproducto/registrarproducto.module#RegistrarproductoPageModule', name: 'RegistrarproductoPage', segment: 'registrarproducto', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/start/start.module#StartPageModule', name: 'StartPage', segment: 'start', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tucuenta/tucuenta.module#TucuentaPageModule', name: 'TucuentaPage', segment: 'tucuenta', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/terms-conditions/terms-conditions.module#TermsAndConditionsModule', name: 'TermsAndConditionsPage', segment: 'terms-conditions', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/terms-conditions/terms-conditions.module#TermsAndConditionsModule', name: 'TermsAndConditionsPage', segment: 'terms-conditions', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tucuenta/tucuenta.module#TucuentaPageModule', name: 'TucuentaPage', segment: 'tucuenta', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_9__pages_cart_cart_module__["CartPageModule"],
@@ -1458,63 +1480,6 @@ AccountEmailFormComponent = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountForgotFormComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/*
-  Generated class for the AccountForgotForm component.
-
-  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
-  for more info on Angular 2 Components.
-*/
-var AccountForgotFormComponent = (function () {
-    function AccountForgotFormComponent(loading, alert, actionSheet) {
-        this.loading = loading;
-        this.alert = alert;
-        this.actionSheet = actionSheet;
-        this.login = {};
-        this.submitted = false;
-    }
-    AccountForgotFormComponent.prototype.onForgot = function (form) {
-    };
-    AccountForgotFormComponent.prototype.showAlert = function (title, subtitle) {
-        var alert = this.alert.create({
-            title: title,
-            subTitle: subtitle,
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    return AccountForgotFormComponent;
-}());
-AccountForgotFormComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'account-forgot-form',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\components\account-forgot-form\account-forgot-form.html"*/'<form #loginForm="ngForm" novalidate>\n\n  <ion-list>\n\n    <ion-item class="login-form">\n\n      <ion-label frost stacked color="light">CORREO</ion-label>\n\n      <ion-icon ios="ios-contact-outline" md="md-contact" item-left frost color="light"></ion-icon>\n\n      <ion-input type="email" [(ngModel)]="login.email" name="username" #email="ngModel" spellcheck="false" autocapitalize="off"\n\n        required placeholder="Digite su correo para recibir una confirmación" color="light"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button large outline block round (tap)="onForgot(loginForm)" color="light">Cambiar Contraseña</button>\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col>\n\n        <account-login-social></account-login-social>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</form>'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\components\account-forgot-form\account-forgot-form.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
-], AccountForgotFormComponent);
-
-//# sourceMappingURL=account-forgot-form.js.map
-
-/***/ }),
-
-/***/ 362:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountLoginFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
@@ -1610,7 +1575,7 @@ MarketPage = __decorate([
 
 /***/ }),
 
-/***/ 482:
+/***/ 481:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1656,6 +1621,63 @@ AccountLoginSocialComponent = __decorate([
 ], AccountLoginSocialComponent);
 
 //# sourceMappingURL=account-login-social.js.map
+
+/***/ }),
+
+/***/ 482:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountForgotFormComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the AccountForgotForm component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+*/
+var AccountForgotFormComponent = (function () {
+    function AccountForgotFormComponent(loading, alert, actionSheet) {
+        this.loading = loading;
+        this.alert = alert;
+        this.actionSheet = actionSheet;
+        this.login = {};
+        this.submitted = false;
+    }
+    AccountForgotFormComponent.prototype.onForgot = function (form) {
+    };
+    AccountForgotFormComponent.prototype.showAlert = function (title, subtitle) {
+        var alert = this.alert.create({
+            title: title,
+            subTitle: subtitle,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    return AccountForgotFormComponent;
+}());
+AccountForgotFormComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'account-forgot-form',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\components\account-forgot-form\account-forgot-form.html"*/'<form #loginForm="ngForm" novalidate>\n\n  <ion-list>\n\n    <ion-item class="login-form">\n\n      <ion-label frost stacked color="light">CORREO</ion-label>\n\n      <ion-icon ios="ios-contact-outline" md="md-contact" item-left frost color="light"></ion-icon>\n\n      <ion-input type="email" [(ngModel)]="login.email" name="username" #email="ngModel" spellcheck="false" autocapitalize="off"\n\n        required placeholder="Digite su correo para recibir una confirmación" color="light"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button large outline block round (tap)="onForgot(loginForm)" color="light">Cambiar Contraseña</button>\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col>\n\n        <account-login-social></account-login-social>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</form>'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\components\account-forgot-form\account-forgot-form.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+], AccountForgotFormComponent);
+
+//# sourceMappingURL=account-forgot-form.js.map
 
 /***/ }),
 
@@ -2135,8 +2157,8 @@ var FIREBASE_CONFIG = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountLoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_signup_account_signup__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_forgot_account_forgot__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_signup_account_signup__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__account_forgot_account_forgot__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2193,8 +2215,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_login__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_account_login_form_account_login_form__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_account_login_social_account_login_social__ = __webpack_require__(482);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_account_login_form_account_login_form__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_account_login_social_account_login_social__ = __webpack_require__(481);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

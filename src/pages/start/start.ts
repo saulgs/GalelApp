@@ -35,12 +35,13 @@ export class StartPage {
         }))
       }
     )
-    this.toast.show(`Se han actualizado los productos.`);
+    //this.toast.show(`Se han actualizado los productos.`);
 
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad StartPage');
+    //console.log(item.image);
   }
 
   gotoRegistrarProducto(){
