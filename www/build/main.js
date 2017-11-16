@@ -602,34 +602,34 @@ var map = {
 	],
 	"../pages/cuentausuario/cuentausuario.module": [
 		464,
-		0
+		9
 	],
 	"../pages/market/market.module": [
 		461,
-		6
+		15
 	],
 	"../pages/more/more.module": [
 		460,
-		5
+		14
 	],
 	"../pages/preferences/preferences.module": [
 		466,
-		4
+		13
 	],
 	"../pages/registrarproducto/registrarproducto.module": [
 		462,
-		3
+		12
 	],
 	"../pages/start/start.module": [
 		463,
-		2
+		11
 	],
 	"../pages/terms-conditions/terms-conditions.module": [
 		252
 	],
 	"../pages/tucuenta/tucuenta.module": [
 		465,
-		1
+		10
 	]
 };
 function webpackAsyncContext(req) {
