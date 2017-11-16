@@ -33,6 +33,7 @@ export class StartPage {
         }))
       }
     )
+    this.toast.show(`Se han actualizado los productos.`);
   }
 
   ionViewDidLoad() {
