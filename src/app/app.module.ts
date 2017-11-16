@@ -32,6 +32,7 @@ import { AccountLoginModule } from '../pages/account-login/account-login.module'
 import { AccountSignupModule } from '../pages/account-signup/account-signup.module';
 import { AccountForgotModule } from '../pages/account-forgot/account-forgot.module';
 import { TermsAndConditionsModule } from './../pages/terms-conditions/terms-conditions.module';  //@Brizo, lo cambié
+import { FirebaseStorageService } from '../services/firebase-storage/firebase-storage.service';
 
 
 
@@ -81,7 +82,8 @@ import { TermsAndConditionsModule } from './../pages/terms-conditions/terms-cond
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListaDeProductosService,
     Camera,
-    ToastService
+    ToastService,
+    FirebaseStorageService
   ]
 })
 export class AppModule {}
