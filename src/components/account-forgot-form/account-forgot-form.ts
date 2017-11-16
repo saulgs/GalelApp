@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { LoadingController, AlertController, ActionSheetController } from 'ionic-angular';
+import { User } from '../../providers/user';
 
-/*
-  Generated class for the AccountForgotForm component.
 
-  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
-  for more info on Angular 2 Components.
-*/
 @Component({
   selector: 'account-forgot-form',
   templateUrl: 'account-forgot-form.html'
@@ -19,13 +15,37 @@ export class AccountForgotFormComponent {
   constructor(
     public loading: LoadingController,
     public alert: AlertController,
-    public actionSheet: ActionSheetController
+    public actionSheet: ActionSheetController,
+    public user: User
   ) { 
 
   }
 
   onForgot(form) {
+    let loader = this.loading.create({
+      content: 'Espera un momento..',
+      duration: 3000
+    });
 
+    this.submitted = true;
+    if (form.valid) {
+      loader.present()
+        .then(() => {
+          this.user.fire.auth().sendPasswordResetEmail(this.login.email)
+            .then(() => {
+              loader.onDidDismiss(() => {
+                this.showAlert('Exito', 'Correo enviado, revisa tu bandeja de correos.');
+              });
+              loader.dismiss();
+            })
+            .catch((error) => {
+              loader.onDidDismiss(() => {
+                this.errorHandler(error);
+              });
+              loader.dismiss();
+            });
+        }).catch(console.debug);
+    }
   }
 
   public showAlert(title, subtitle) {
@@ -35,6 +55,13 @@ export class AccountForgotFormComponent {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  public errorHandler(error) {
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    let handler = User.errorHandler(errorCode, errorMessage);
+    this.showAlert(handler.title, handler.message);
   }
 
 }
