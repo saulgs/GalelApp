@@ -11,7 +11,7 @@ import { User } from '../../providers/user';
 })
 export class AccountLoginFormComponent {
 
-  login: { email?: string, password?: string } = {};
+  login: { username?: string, password?: string } = {};
   submitted = false;
   loader: any = false;
 
@@ -27,13 +27,13 @@ export class AccountLoginFormComponent {
     this.submitted = true;
     if (form.valid) {
       const loader = this.loading.create({
-        content: 'Please wait..',
+        content: 'Espera un momento..',
         duration: 10000
       });
       loader.present().then(() => {
         this.user.fire
           .auth()
-          .signInWithEmailAndPassword(this.login.email, this.login.password)
+          .signInWithEmailAndPassword(this.login.username, this.login.password)
           .then(() => {
             loader.onDidDismiss(() => {
               this.navCtrl.setRoot(MarketPage).then(() => {   //@Brizo: Market Page

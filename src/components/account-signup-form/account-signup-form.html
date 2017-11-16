@@ -10,13 +10,13 @@
     <ion-item class="login-form">
       <ion-label frost stacked color="light">NOMBRE DE USUARIO</ion-label>
       <ion-icon ios="ios-contact-outline" md="md-person" item-left frost color="light"></ion-icon>
-      <ion-input type="email" (ionFocus)="signFocus=true" [(ngModel)]="login.username" name="username" #email="ngModel" spellcheck="false"
+      <ion-input type="email" (ionFocus)="signFocus=true" [(ngModel)]="login.username" name="username" #username="ngModel" spellcheck="false"
         autocapitalize="off" required placeholder="Digita tu nombre de usuario de preferencia" color="light"></ion-input>
     </ion-item>
     <ion-item class="login-form">
       <ion-label frost stacked color="light">TELÉFONO</ion-label>
       <ion-icon ios="ios-at-outline" md="md-at" item-left frost color="light"></ion-icon>
-      <ion-input type="email" (ionFocus)="signFocus=true" [(ngModel)]="login.number" name="number" #email="ngModel" spellcheck="false"
+      <ion-input type="email" (ionFocus)="signFocus=true" [(ngModel)]="login.number" name="number" #number="ngModel" spellcheck="false"
         autocapitalize="off" required placeholder="Digite su numero con que puedan contactarlo/a" color="light"></ion-input>
     </ion-item>    
     <div class="hr-gradient-alternate"></div>
@@ -31,7 +31,7 @@
       <ion-label frost stacked color="light">CONFIRMAR CONTRASEÑA</ion-label>
       <ion-icon ios="ios-lock-outline" md="md-lock" item-left frost color="light"></ion-icon>
       <ion-input type="password" (ionFocus)="signFocus=true" (ionBlur)="signFocus=false" [(ngModel)]="login.password2" name="password2"
-        #password="ngModel" required placeholder="Digite nuevamente la contraseña" color="light"></ion-input>
+        #password2="ngModel" required placeholder="Digite nuevamente la contraseña" color="light"></ion-input>
     </ion-item>
     <div class="hr-gradient-alternate"></div>  
     <ion-item>
@@ -44,14 +44,14 @@
       <ion-item>
         <ion-label frost stacked color="light">NOMBRE DE SU NEGOCIO</ion-label>
         <ion-icon ios="ios-pricetag-outline" md="md-pricetag" item-left frost color="light"></ion-icon>        
-        <ion-input type="text" (ionFocus)="signFocus=true" (ionBlur)="signFocus=false" [(ngModel)]="login.market" name="market" 
+        <ion-input type="text" (ionFocus)="signFocus=true" (ionBlur)="signFocus=false" [(ngModel)]="login.marketName" name="market" 
         placeholder="Ejemplo Galel-Souvenir"></ion-input>
       </ion-item>
       <div class="hr-gradient-alternate"></div>      
       <ion-item>
         <ion-label frost stacked color="light">DIRECCIÓN DE SU NEGOCIO</ion-label>
         <ion-icon ios="ios-home-outline" md="md-home" item-left frost color="light"></ion-icon>        
-        <ion-input type="text" (ionFocus)="signFocus=true" (ionBlur)="signFocus=false" [(ngModel)]="login.direction" name="direction" 
+        <ion-input type="text" (ionFocus)="signFocus=true" (ionBlur)="signFocus=false" [(ngModel)]="login.marketDirection" name="direction" 
         placeholder="Colonia - calle,avenida - Ciudad, Departamento"></ion-input>
       </ion-item>     
     </ion-list>
@@ -60,7 +60,7 @@
     <a ion-button small outline block round color="light" (click)="onTerms()"> Términos y condiciones </a>
     <ion-item>
       <ion-label color="light">Estoy de acuerdo</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-checkbox [(ngModel)]="login.termsConditions" name="termsConditions">   </ion-checkbox>
     </ion-item>
     <p color="light">Al dar click en <strong>Estoy de acuerdo</strong> usted acepta los términos y condiciones de uso de Galel-Souvenir Market</p>
 

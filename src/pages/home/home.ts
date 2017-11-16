@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -13,7 +12,7 @@ export class HomePage {
   }
 
   gotoLogin(){
-    this.navCtrl.push(LoginPage);
+    //this.navCtrl.push(LoginPage);
   }
 
   ionViewDidLoad() {

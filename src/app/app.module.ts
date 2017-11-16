@@ -6,15 +6,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import {AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 
+//Brizo
+import { HttpModule } from '@angular/http';
+import { File } from '@ionic-native/file';
+import { Firebase } from '@ionic-native/firebase';
+import { IonicStorageModule } from '@ionic/storage';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook } from '@ionic-native/facebook';
+
 import { MyApp } from './app.component';
 import { HomePageModule } from './../pages/home/home.module';
 import { CartPageModule } from './../pages/cart/cart.module';
-import { LoginPage } from '../pages/login/login';
 import { MarketPage } from '../pages/market/market';
 import { StartPage } from '../pages/start/start';
 import { PreferencesPage } from '../pages/preferences/preferences';
 import { MorePage } from '../pages/more/more';
-import { RegistratePage } from '../pages/registrate/registrate';
 import { RegistrarproductoPage } from '../pages/registrarproducto/registrarproducto';
 import { TucuentaPage } from '../pages/tucuenta/tucuenta';
 
@@ -32,26 +38,24 @@ import { AccountLoginModule } from '../pages/account-login/account-login.module'
 import { AccountSignupModule } from '../pages/account-signup/account-signup.module';
 import { AccountForgotModule } from '../pages/account-forgot/account-forgot.module';
 import { TermsAndConditionsModule } from './../pages/terms-conditions/terms-conditions.module';  //@Brizo, lo cambié
-import { FirebaseStorageService } from '../services/firebase-storage/firebase-storage.service';
 
+import { Fire } from '../providers/firebase';
+import { User } from '../providers/user';
+import { Setup } from '../providers/setup';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage,
     MarketPage,
     StartPage,
     PreferencesPage,
     MorePage,
-    RegistratePage,
     RegistrarproductoPage,
     TucuentaPage,
     AutoHideDirective
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
     CartPageModule, //esto es lo correcto
     HomePageModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
@@ -62,17 +66,19 @@ import { FirebaseStorageService } from '../services/firebase-storage/firebase-st
     AccountLoginModule,     //@Brizo
     AccountSignupModule,    //@Brizo
     AccountForgotModule,     //@Brizo
-    TermsAndConditionsModule
+    TermsAndConditionsModule,
+    HttpModule,
+    BrowserModule,
+    IonicStorageModule.forRoot(),    
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage,
     MarketPage,
     StartPage,
     PreferencesPage,
     MorePage,
-    RegistratePage,
     RegistrarproductoPage,
     TucuentaPage
   ],
@@ -83,7 +89,13 @@ import { FirebaseStorageService } from '../services/firebase-storage/firebase-st
     ListaDeProductosService,
     Camera,
     ToastService,
-    FirebaseStorageService
+    User,
+    Fire,
+    GooglePlus,
+    Facebook,
+    File,
+    Firebase,
+    Setup
   ]
 })
 export class AppModule {}

@@ -5,7 +5,6 @@ import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { FirebaseStorageService } from '../../services/firebase-storage/firebase-storage.service';
 
  
 @IonicPage()
@@ -21,8 +20,7 @@ export class RegistrarproductoPage {
     price: undefined,
     quantity: undefined,
     color: '',
-    mark: '',
-    image: ''
+    mark: ''
   };
 
   public base64Image: string;
@@ -32,12 +30,11 @@ export class RegistrarproductoPage {
     public navParams: NavParams, 
     private productos: ListaDeProductosService,
     private camera: Camera,
-    private toast: ToastService,
-    private storage: FirebaseStorageService
+    private toast: ToastService
   ) {}
   
   private options: CameraOptions = {
-    quality: 30,
+    quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
@@ -53,13 +50,9 @@ export class RegistrarproductoPage {
 
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
-      this.storage.uploadImage(ref.key, this.base64Image).then((snapshot) => {
-        item.image = this.storage.getUrl();
-        this.productos.editarProducto(ref.key, item);
-      });
       this.toast.show(`${item.name} se ha guardado`);
       this.navCtrl.push(MarketPage, { key: ref.key } );
-    });
+    })
   }
 
   tomarFoto(){

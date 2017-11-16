@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color='galelBlue'>
+  <ion-navbar color='galelOrange'>
     <ion-title>¡Explora en Galel!</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="gotoCart()">
@@ -8,11 +8,9 @@
     </ion-buttons>
   </ion-navbar>
   <ion-searchbar 
-  (ionInput)="getItems($event)"
   animated="true"
   autocomplete="on"
   placeholder='Buscar aqui'
-  type="text"
   [showCancelButton]="shouldShowCancel">
   </ion-searchbar>
 </ion-header>
@@ -22,9 +20,19 @@
   
   <ion-list>
     <ion-row>
-        <ion-col *ngFor="let item of listaDeProductos$ | async ">
-            <ion-card  >
-                <img [src]="item.image"/>
+        <ion-col *ngFor="let item of listaDeProductos$ | async">
+            <ion-card>
+                <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+                <ion-fab right top>
+                  <button ion-fab  color="galelOrange">
+                    <ion-icon name="md-cart"></ion-icon>
+                  </button>
+                </ion-fab>
+                <ion-fab right top style="padding-top: 60px;">
+                  <button ion-fab  color="dontLike">
+                    <ion-icon name="md-heart"></ion-icon>
+                  </button>
+                </ion-fab>
                 <ion-card-content>
                   <ion-card-title>
                     <strong> {{item.name}} </strong>
@@ -32,111 +40,24 @@
                   <p>
                     {{item.description}}
                   </p>
-                  <p>
-                      #<i>{{item.category}}</i>
-                  </p>
-                  <h4>
-                    <strong> Precio: L {{item.price}} </strong>
-                  </h4>
                   
-                  <ion-row>
-                    <ion-col>
-                        <button ion-button icon-left medium block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">
-                          <ion-icon name="pricetag"></ion-icon>
-                          Añadir al carrito
-                        </button>              
-                    </ion-col>
-                    <ion-col>
-                        <button ion-button icon-left medium outline block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">
-                          <ion-icon name="heart"></ion-icon>
-                          Me gusta
-                        </button>              
-                    </ion-col>          
-                  </ion-row>
+                  <ion-item>
+                    <span item-left>{{item.price}}.00 L</span>
+                    <button ion-button icon-left clear item-end>
+                      <ion-icon name="md-search"></ion-icon>
+                      #{{item.category}}
+                    </button>
+                  </ion-item>
+
                 </ion-card-content>
               </ion-card>
         </ion-col>
     </ion-row>
 
-    
   </ion-list>
 
-<!-- 
-  
-  <ion-card>
-    <img src="../../assets/catalogo/ceramica-lenca.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Jarron lenca
-        </ion-card-title>
-      <p>
-        Jarron de cerammica lenca hecho en Guajiquiro, La Paz
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img src="../../assets/catalogo/ceramica-maya.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Jarron Maya
-        </ion-card-title>
-      <p>
-        Jarron maya hecho en Santa Rosa de Copan
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img src="../../assets/catalogo/cofre-madera.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Cofre de madera
-        </ion-card-title>
-      <p>
-        Cofre de madera hecho en Ojojona, FM
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img src="../../assets/catalogo/hamacas.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Hamaca
-        </ion-card-title>
-      <p>
-        Hamaca hecha en San Antonio de Oriente, FM
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img src="../../assets/catalogo/sandalias-cuero.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Sandalias de cuero
-        </ion-card-title>
-      <p>
-        Sandalias de cuero hecha en Valle de Angeles
-      </p>
-      <p>
-        Precio: $20.00
-      </p>
-    </ion-card-content>
-  </ion-card> -->
-  
-
     <ion-fab bottom right #fab>
-      <a ion-fab color='secondary' (click)="gotoRegistrarProducto()">
+      <a ion-fab color='galelBlue' (click)="gotoRegistrarProducto()">
         <ion-icon name="md-add"></ion-icon>
       </a>
     </ion-fab>

@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 513:
+/***/ 527:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29,7 +29,7 @@ PreferencesPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__preferences__["a" /* PreferencesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__preferences__["a" /* PreferencesPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__preferences__["a" /* PreferencesPage */]),
         ],
     })
 ], PreferencesPageModule);

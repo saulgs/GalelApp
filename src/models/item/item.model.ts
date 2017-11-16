@@ -6,6 +6,5 @@ export interface Item {
     price: number;
     quantity: number;
     color: string;
-    mark: string;
-    image?: string;    
+    mark: string;    
 }
