@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { App } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TucuentaPage } from '../tucuenta/tucuenta';
-import { AccountLoginPage} from '../account-login/account-login';
-
-//@Brizo
-import { User } from '../../providers/user';
-import { ToastService } from './../../services/toast/toast.service';
+import { TufavPage } from '../tufav/tufav';
+import { TulistaPage } from '../tulista/tulista';
+import { TuordenPage } from '../tuorden/tuorden';
+import { AccountLoginPage} from '../account-login/account-login'
 
 /**
  * Generated class for the MorePage page.
@@ -22,12 +21,8 @@ import { ToastService } from './../../services/toast/toast.service';
 })
 export class MorePage {
 
-  constructor(public navCtrl: NavController, 
-    public navParams: NavParams, 
-    private app: App, 
-    private user: User,
-    private toast: ToastService
-  ) {   }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private app: App) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MorePage');
@@ -37,11 +32,25 @@ export class MorePage {
     this.navCtrl.push(TucuentaPage);
   }
 
+  gotoFav(){
+    this.navCtrl.push(TufavPage);
+  }
+
+  gotoLista(){
+    this.navCtrl.push(TulistaPage);
+  }
+
+  gotoOrden(){
+    this.navCtrl.push(TuordenPage);
+  }
   
   gotoLogin(){
-    if(this.user.logout()){
-      this.toast.show('Ha cerrado sesión con Éxito. ¡Vuelve pronto!');      
-      this.app.getRootNavs()[0].setRoot(AccountLoginPage, {}, {animate: true, direction: 'forward'});      
-    }
+   console.log(this.app.getRootNavs()[0]);
+   /*
+   *No utilizar getRootNav() ya que en el siguiente "Major Release" desaparecera
+   * 
+   *  this.app.getRootNav().setRoot(LoginPage, {}, {animate: true, direction: 'forward'});
+   */
+    this.app.getRootNavs()[0].setRoot(AccountLoginPage, {}, {animate: true, direction: 'forward'});
   }
 }

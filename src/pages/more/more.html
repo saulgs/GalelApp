@@ -19,15 +19,15 @@
       <ion-icon name="md-body" item-start></ion-icon> Tu cuenta 
     </button>
 
-    <button ion-item> 
+    <button ion-item (click)="gotoLista()"> 
       <ion-icon name="md-list" item-start></ion-icon> Tu lista
     </button>
 
-    <button ion-item> 
+    <button ion-item (click)="gotoOrden()"> 
       <ion-icon name="md-basket" item-start></ion-icon> Tus ordenes 
     </button>
   
-    <button ion-item> 
+    <button ion-item (click)="gotoFav()">  
       <ion-icon name="md-heart" item-start></ion-icon> Tus recomendaciones 
     </button>
   <!-- El metodo gotoLogin() aqui es diferente -->
