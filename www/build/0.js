@@ -1,9 +1,13 @@
 webpackJsonp([0],{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ 537:
 =======
 /***/ 464:
+>>>>>>> master
+=======
+/***/ 510:
 >>>>>>> master
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -16,7 +20,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cuentausuario__ = __webpack_require__(545);
 =======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cuentausuario__ = __webpack_require__(467);
+>>>>>>> master
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cuentausuario__ = __webpack_require__(517);
 >>>>>>> master
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -48,9 +56,13 @@ CuentausuarioPageModule = __decorate([
 /***/ }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ 545:
 =======
 /***/ 467:
+>>>>>>> master
+=======
+/***/ 517:
 >>>>>>> master
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

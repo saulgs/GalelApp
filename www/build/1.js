@@ -1,9 +1,13 @@
 webpackJsonp([1],{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ 543:
 =======
 /***/ 465:
+>>>>>>> master
+=======
+/***/ 516:
 >>>>>>> master
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -16,7 +20,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tucuenta__ = __webpack_require__(190);
 =======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tucuenta__ = __webpack_require__(145);
+>>>>>>> master
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tucuenta__ = __webpack_require__(160);
 >>>>>>> master
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

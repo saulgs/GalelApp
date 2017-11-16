@@ -1,3 +1,4 @@
+import { FirebaseStorageService } from './../../services/firebase-storage/firebase-storage.service';
 import { ToastService } from './../../services/toast/toast.service';
 import { Item } from './../../models/item/item.model';
 import { ListaDeProductosService } from './../../services/lista-de-productos/lista-de-productos.service';
@@ -20,8 +21,14 @@ export class StartPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
+<<<<<<< HEAD
     private productos: ListaDeProductosService
     //private toast: ToastService
+=======
+    private productos: ListaDeProductosService,
+    private toast: ToastService,
+    private storage: FirebaseStorageService
+>>>>>>> master
   ) { 
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
@@ -33,10 +40,13 @@ export class StartPage {
         }))
       }
     )
+    //this.toast.show(`Se han actualizado los productos.`);
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StartPage');
+    //console.log('ionViewDidLoad StartPage');
+    //console.log(item.image);
   }
 
   gotoRegistrarProducto(){

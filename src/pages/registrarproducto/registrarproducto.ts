@@ -5,7 +5,11 @@ import { Item } from './../../models/item/item.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+<<<<<<< HEAD
 import { FirebaseStorage, File } from "./../../services/firebase-storage/firebase-storage.service";
+=======
+import { FirebaseStorageService } from '../../services/firebase-storage/firebase-storage.service';
+>>>>>>> master
 
  
 @IonicPage()
@@ -21,7 +25,8 @@ export class RegistrarproductoPage {
     price: undefined,
     quantity: undefined,
     color: '',
-    mark: ''
+    mark: '',
+    image: ''
   };
   
   public file: File;
@@ -33,11 +38,19 @@ export class RegistrarproductoPage {
     private productos: ListaDeProductosService,
     private camera: Camera,
     private toast: ToastService,
+<<<<<<< HEAD
     private firebaseStorage: FirebaseStorage
   ) {}
   
   private options: CameraOptions = {
     quality: 50,
+=======
+    private storage: FirebaseStorageService
+  ) {}
+  
+  private options: CameraOptions = {
+    quality: 30,
+>>>>>>> master
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
@@ -53,10 +66,23 @@ export class RegistrarproductoPage {
 
   ingresarProducto(item: Item){
     this.productos.ingresarProducto(item).then(ref => {
+<<<<<<< HEAD
       this.firebaseStorage.addFile(this.file);
       this.toast.show(`${item.name} se ha guardado`);
       this.navCtrl.push(MarketPage, { key: ref.key } );
     })    
+=======
+      //this.toast.show(`${item.name} se ha guardado`);
+      this.storage.uploadImage(ref.key, this.base64Image).then((snapshot) => {
+        item.image = this.storage.getUrl();
+        this.productos.editarProducto(ref.key, item);
+      });
+      //this.storage.getImage(ref.key).then( url => {
+        //item.image = url;
+      //}); 
+      this.navCtrl.push(MarketPage, { key: ref.key } );
+    });
+>>>>>>> master
   }
 
   tomarFoto(){
