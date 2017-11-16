@@ -8,9 +8,11 @@
     </ion-buttons>
   </ion-navbar>
   <ion-searchbar 
+  (ionInput)="getItems($event)"
   animated="true"
   autocomplete="on"
   placeholder='Buscar aqui'
+  type="text"
   [showCancelButton]="shouldShowCancel">
   </ion-searchbar>
 </ion-header>
@@ -20,9 +22,9 @@
   
   <ion-list>
     <ion-row>
-        <ion-col *ngFor="let item of listaDeProductos$ | async">
+        <ion-col *ngFor="let item of listaDeProductos$ | async ">
             <ion-card  >
-                <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+                <img [src]="item.image"/>
                 <ion-card-content>
                   <ion-card-title>
                     <strong> {{item.name}} </strong>
@@ -39,10 +41,16 @@
                   
                   <ion-row>
                     <ion-col>
-                        <button ion-button medium block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">Añadir a carrito</button>              
+                        <button ion-button icon-left medium block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">
+                          <ion-icon name="pricetag"></ion-icon>
+                          Añadir al carrito
+                        </button>              
                     </ion-col>
                     <ion-col>
-                        <button ion-button medium outline block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">Añadir a favoritos</button>              
+                        <button ion-button icon-left medium outline block round color='galelOrange' navPush="CartPage" [navParams]="{item: item}">
+                          <ion-icon name="heart"></ion-icon>
+                          Me gusta
+                        </button>              
                     </ion-col>          
                   </ion-row>
                 </ion-card-content>

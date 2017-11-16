@@ -1,0 +1,33 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.galel.galelapp"
+    }
+  },
+  "dependent_plugins": {}
+}
