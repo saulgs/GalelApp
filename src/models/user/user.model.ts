@@ -4,4 +4,6 @@ export interface UserModel {
     number: string;
     pass: string;
     username: string;
+    fb_token: string;
+    google_token: string;
 }

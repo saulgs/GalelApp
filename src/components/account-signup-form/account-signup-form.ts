@@ -31,7 +31,9 @@ export class AccountSignupFormComponent {
     email: '',
     number: undefined,
     pass: '',
-    username: ''
+    username: '',
+    fb_token: '',
+    google_token: ''
   };  
 
   //Brizo

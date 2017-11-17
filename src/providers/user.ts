@@ -283,6 +283,16 @@ export class User {
         });
     }
 
+    //@Brizo
+    addItemToCartOnDatabase(cartItemData){
+        return this.fire.database().ref('cart-items/'+ cartItemData.userKey +'/'+cartItemData.itemKey).set({
+            itemName: cartItemData.itemName,
+            price: cartItemData.price,
+            sellBy: cartItemData.sellBy,
+            state: cartItemData.state
+        });
+    }
+
     /**
      * Error handler
      * 

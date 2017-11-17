@@ -22,15 +22,24 @@
     <ion-row>
         <ion-col *ngFor="let item of listaDeProductos$ | async">
             <ion-card>
+<<<<<<< HEAD
                 <img [src]="item.image"/>
                 <ion-fab right top>
                   <button ion-fab  color="galelOrange">
                     <ion-icon name="md-cart"></ion-icon>
+=======
+                <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+                
+                <ion-fab right top style="padding-top: 20px;">
+                  <button ion-fab color="dontLike">
+                    <ion-icon name="md-heart"></ion-icon>
+>>>>>>> 2f2ddfb89cf299ffa7724abee6f5797de3faf243
                   </button>
                 </ion-fab>
-                <ion-fab right top style="padding-top: 60px;">
-                  <button ion-fab  color="dontLike">
-                    <ion-icon name="md-heart"></ion-icon>
+                
+                <ion-fab right top style="padding-top: 80px;">
+                  <button ion-fab (tap)="addtoCart(item)" color="secondary">
+                    <ion-icon name="md-cart"></ion-icon>
                   </button>
                 </ion-fab>
                 <ion-card-content>
