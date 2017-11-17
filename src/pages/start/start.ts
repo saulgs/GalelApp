@@ -7,8 +7,7 @@ import { RegistrarproductoPage } from '../registrarproducto/registrarproducto';
 import { CartPage } from '../cart/cart';
 import { Observable } from 'rxjs/Observable';
 
-import { CartItemModel } from './../../models/item/cart_item.model';         //@Brizo
-import {User} from '../../providers/user';                              //@Brizo
+
 
 @IonicPage()
 @Component({
@@ -19,21 +18,10 @@ export class StartPage {
 
   listaDeProductos$: Observable<Item[]>;
 
-  //Brizo
-  cartItemData: CartItemModel = {
-    userKey: '',
-    itemKey: '',
-    itemName: '',
-    price: undefined,
-    sellBy: '',
-    state: ''  
-  };  
-
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     private productos: ListaDeProductosService,
-    private toast: ToastService,
-    private user: User
+    private toast: ToastService
   ) { 
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
@@ -59,20 +47,9 @@ export class StartPage {
     this.navCtrl.push(CartPage);
   }
 
-
-  addtoCart(item){
-    console.log("addToCart()");
-    this.cartItemData.userKey = this.user.current().uid;
-    this.cartItemData.itemKey = item.key;
-    this.cartItemData.itemName = item.name;
-    this.cartItemData.price = item.price;
-    this.cartItemData.sellBy = '';
-    this.cartItemData.state = 'En carrito'
-
-    if(this.user.addItemToCartOnDatabase(this.cartItemData)){
-      this.toast.show(`${item.name} agregado a su carrito.`);      
-    }
-
+  addtoCart(){
+    //this.navCtrl.push(CartPage);
+    console.log();
   }
 
 }

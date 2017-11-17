@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 528:
+/***/ 535:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartPageModule", function() { return StartPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TulistaPageModule", function() { return TulistaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__start__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tulista__ = __webpack_require__(161);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var StartPageModule = (function () {
-    function StartPageModule() {
+var TulistaPageModule = (function () {
+    function TulistaPageModule() {
     }
-    return StartPageModule;
+    return TulistaPageModule;
 }());
-StartPageModule = __decorate([
+TulistaPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__start__["a" /* StartPage */],
+            __WEBPACK_IMPORTED_MODULE_2__tulista__["a" /* TulistaPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__start__["a" /* StartPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tulista__["a" /* TulistaPage */]),
         ],
     })
-], StartPageModule);
+], TulistaPageModule);
 
-//# sourceMappingURL=start.module.js.map
+//# sourceMappingURL=tulista.module.js.map
 
 /***/ })
 
