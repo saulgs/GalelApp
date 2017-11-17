@@ -22,7 +22,7 @@
     <ion-row>
         <ion-col *ngFor="let item of listaDeProductos$ | async">
             <ion-card>
-                <img src="../../assets/catalogo/cartera-cuero.jpg"/>
+                <img [src]="item.image"/>
                 <ion-fab right top>
                   <button ion-fab  color="galelOrange">
                     <ion-icon name="md-cart"></ion-icon>

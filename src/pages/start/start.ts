@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegistrarproductoPage } from '../registrarproducto/registrarproducto';
 import { CartPage } from '../cart/cart';
 import { Observable } from 'rxjs/Observable';
+import { FirebaseStorageService } from '../../services/firebase-storage/firebase-storage.service';
 
 
 
@@ -21,7 +22,8 @@ export class StartPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     private productos: ListaDeProductosService,
-    private toast: ToastService
+    private toast: ToastService,
+    private storage: FirebaseStorageService
   ) { 
     this.listaDeProductos$ = this.productos
     .getListaDeProductos() //Una lista de la Base de Datos
@@ -36,7 +38,7 @@ export class StartPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StartPage');
+    //console.log('ionViewDidLoad StartPage');
   }
 
   gotoRegistrarProducto(){
@@ -49,7 +51,7 @@ export class StartPage {
 
   addtoCart(){
     //this.navCtrl.push(CartPage);
-    console.log();
+    //console.log();
   }
 
 }

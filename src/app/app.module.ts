@@ -1,3 +1,4 @@
+import { FirebaseStorageService } from './../services/firebase-storage/firebase-storage.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -105,7 +106,8 @@ import { Setup } from '../providers/setup';
     Facebook,
     File,
     Firebase,
-    Setup
+    Setup,
+    FirebaseStorageService
   ]
 })
 export class AppModule {}
