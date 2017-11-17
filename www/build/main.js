@@ -265,7 +265,7 @@ var StartPage = (function () {
 }());
 StartPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-        selector: 'page-start',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/'<ion-header>\n\n  <ion-navbar color=\'galelOrange\'>\n\n    <ion-title>¡Explora en Galel!</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="gotoCart()">\n\n        <ion-icon name="md-cart"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar \n\n  animated="true"\n\n  autocomplete="on"\n\n  placeholder=\'Buscar aqui\'\n\n  [showCancelButton]="shouldShowCancel">\n\n  </ion-searchbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding auto-hide>\n\n  \n\n  <ion-list>\n\n    <ion-row>\n\n        <ion-col *ngFor="let item of listaDeProductos$ | async">\n\n            <ion-card>\n\n<<<<<<< HEAD\n\n                <img [src]="item.image"/>\n\n                <ion-fab right top>\n\n                  <button ion-fab  color="galelOrange">\n\n                    <ion-icon name="md-cart"></ion-icon>\n\n=======\n\n                <img src="../../assets/catalogo/cartera-cuero.jpg"/>\n\n                \n\n                <ion-fab right top style="padding-top: 20px;">\n\n                  <button ion-fab color="dontLike">\n\n                    <ion-icon name="md-heart"></ion-icon>\n\n>>>>>>> 2f2ddfb89cf299ffa7724abee6f5797de3faf243\n\n                  </button>\n\n                </ion-fab>\n\n                \n\n                <ion-fab right top style="padding-top: 80px;">\n\n                  <button ion-fab (tap)="addtoCart(item)" color="secondary">\n\n                    <ion-icon name="md-cart"></ion-icon>\n\n                  </button>\n\n                </ion-fab>\n\n                <ion-card-content>\n\n                  <ion-card-title>\n\n                    <strong> {{item.name}} </strong>\n\n                  </ion-card-title>\n\n                  <p>\n\n                    {{item.description}}\n\n                  </p>\n\n                  \n\n                  <ion-item>\n\n                    <span item-left>{{item.price}}.00 L</span>\n\n                    <button ion-button icon-left clear item-end>\n\n                      <ion-icon name="md-search"></ion-icon>\n\n                      #{{item.category}}\n\n                    </button>\n\n                  </ion-item>\n\n\n\n                </ion-card-content>\n\n              </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n\n\n  </ion-list>\n\n\n\n    <ion-fab bottom right #fab>\n\n      <a ion-fab color=\'galelBlue\' (click)="gotoRegistrarProducto()">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </a>\n\n    </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/,
+        selector: 'page-start',template:/*ion-inline-start:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/'<ion-header>\n\n  <ion-navbar color=\'galelOrange\'>\n\n    <ion-title>¡Explora en Galel!</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="gotoCart()">\n\n        <ion-icon name="md-cart"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  <ion-searchbar \n\n  animated="true"\n\n  autocomplete="on"\n\n  placeholder=\'Buscar aqui\'\n\n  [showCancelButton]="shouldShowCancel">\n\n  </ion-searchbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding auto-hide>\n\n  \n\n  <ion-list>\n\n    <ion-row>\n\n        <ion-col *ngFor="let item of listaDeProductos$ | async">\n\n            <ion-card>\n\n                <img [src]="item.image"/>\n\n                <ion-fab right top>\n\n                  <button ion-fab  color="galelOrange">\n\n                    <ion-icon name="md-cart"></ion-icon>\n\n                  </button>\n\n                </ion-fab>\n\n                \n\n                <ion-fab right top style="padding-top: 80px;">\n\n                  <button ion-fab (tap)="addtoCart(item)" color="secondary">\n\n                    <ion-icon name="md-cart"></ion-icon>\n\n                  </button>\n\n                </ion-fab>\n\n                <ion-card-content>\n\n                  <ion-card-title>\n\n                    <strong> {{item.name}} </strong>\n\n                  </ion-card-title>\n\n                  <p>\n\n                    {{item.description}}\n\n                  </p>\n\n                  \n\n                  <ion-item>\n\n                    <span item-left>{{item.price}}.00 L</span>\n\n                    <button ion-button icon-left clear item-end>\n\n                      <ion-icon name="md-search"></ion-icon>\n\n                      #{{item.category}}\n\n                    </button>\n\n                  </ion-item>\n\n\n\n                </ion-card-content>\n\n              </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n\n\n  </ion-list>\n\n\n\n    <ion-fab bottom right #fab>\n\n      <a ion-fab color=\'galelBlue\' (click)="gotoRegistrarProducto()">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </a>\n\n    </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\axels\Documents\GitHub\GalelApp\src\pages\start\start.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavParams */],
@@ -2238,6 +2238,15 @@ var User = (function () {
             marketPlace: sellerData.marketPlace
         });
     };
+    //@Brizo
+    User.prototype.addItemToCartOnDatabase = function (cartItemData) {
+        return this.fire.database().ref('cart-items/' + cartItemData.userKey + '/' + cartItemData.itemKey).set({
+            itemName: cartItemData.itemName,
+            price: cartItemData.price,
+            sellBy: cartItemData.sellBy,
+            state: cartItemData.state
+        });
+    };
     /**
      * Error handler
      *
@@ -2762,7 +2771,9 @@ var AccountSignupFormComponent = (function () {
             email: '',
             number: undefined,
             pass: '',
-            username: ''
+            username: '',
+            fb_token: '',
+            google_token: ''
         };
         //Brizo
         this.sellerData = {
