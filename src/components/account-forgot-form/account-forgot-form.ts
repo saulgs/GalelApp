@@ -34,7 +34,7 @@ export class AccountForgotFormComponent {
           this.user.fire.auth().sendPasswordResetEmail(this.login.email)
             .then(() => {
               loader.onDidDismiss(() => {
-                this.showAlert('Exito', 'Correo enviado, revisa tu bandeja de correos.');
+                this.showAlert('Correo enviado', 'Revisa tu bandeja de mensajes.');
               });
               loader.dismiss();
             })

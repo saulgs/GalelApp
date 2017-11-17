@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 /** 
  *  Import Firebase
  */
-import * as firebaseConfig from '../config/firebase.json';
+import { FIREBASE_CONFIG } from '../config/firebase.credentials';
+
 
 import * as Firebase from 'firebase';
 let firebase: any = Firebase;
@@ -13,7 +14,7 @@ export class Fire {
     constructor() {
         if (!firebase.apps.length) {
             firebase = firebase.default;
-            firebase.initializeApp(firebaseConfig);
+            firebase.initializeApp(FIREBASE_CONFIG);
         }
     }
 

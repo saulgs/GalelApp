@@ -7,10 +7,6 @@ import { App, AlertController, LoadingController, Events, Platform, ToastControl
 import { Storage } from '@ionic/storage';
 import { File } from '@ionic-native/file';
 import { Firebase } from '@ionic-native/firebase';
-/**
- * Import Google
- */
-import * as googleConfig from '../config/google.json';
 
 /**
  * Import Facebook
@@ -110,7 +106,7 @@ export class User {
         public firePlugin: Firebase,
         public setup: Setup
     ) {
-        this.googleWebClient = googleConfig.webClient;
+        //this.googleWebClient = googleConfig.webClient;
         this.loading = loader.create({
             content: 'Please wait..',
             duration: 10000,
@@ -258,7 +254,7 @@ export class User {
                 // logout google native
                 // it can show error in dev mode, using -lc
                 // try in production mode (eg. ionic run android --prod)
-                this.googleplus.logout();
+                //this.googleplus.logout();
                 this.storage.ready().then(() => {
                     this.storage.clear();
                     this.events.publish('user:loggedOut');
@@ -267,6 +263,34 @@ export class User {
             } catch (e) { reject(e); }
         })
 
+    }
+
+    //@Brizo
+    newUserOnDatabase(userData){
+        return this.fire.database().ref('users/'+ userData.key).set({
+            email: userData.email,
+            number: userData.number,
+            pass: userData.pass,
+            username: userData.username
+        });
+    }
+
+    //@Brizo
+    newSellerOnDatabase(sellerData){
+        return this.fire.database().ref('sellers/'+ sellerData.key).set({
+            marketName: sellerData.marketName,
+            marketPlace: sellerData.marketPlace
+        });
+    }
+
+    //@Brizo
+    addItemToCartOnDatabase(cartItemData){
+        return this.fire.database().ref('cart-items/'+ cartItemData.userKey +'/'+cartItemData.itemKey).set({
+            itemName: cartItemData.itemName,
+            price: cartItemData.price,
+            sellBy: cartItemData.sellBy,
+            state: cartItemData.state
+        });
     }
 
     /**
@@ -283,22 +307,23 @@ export class User {
         let result: any = { title: 'Fail', message: message };
         switch (code) {
             case 'auth/account-exists-with-different-credential':
-                result = { title: 'Oops', message: 'It already exists an account with the email address asserted by the credential. Login first before connecting with other accounts.' };
+                result = { title: '¡Oops!', message: 'It already exists an account with the email address asserted by the credential. Login first before connecting with other accounts.' };
                 break;
-            // case 'auth/user-not-found':
-            //   result = { title: 'Atenção', message: 'Usuário não encontrado.' };
-            //   break;
-            // case 'auth/wrong-password':
-            //   result = { title: 'Atenção', message: 'Password incorreta.' };
-            //   break;
-            // case 'auth/weak-password':
-            //   result = { title: 'Atenção', message: 'A password deve ter no mínimo 6 caracteres.' };
-            //   break;
-            // case 'auth/invalid-email':
-            //   result = { title: 'Atenção', message: 'O endereço de email está mal formatado.' };
-            //   break;
-            // case 'auth/email-already-in-use':
-            //   result = { title: 'Atenção', message: 'Este endereço de email já está sendo utilizado.' };
+             case 'auth/user-not-found':
+               result = { title: '¡Oops!', message: 'Usuario/correo no encontrado. ¿Seguro que tienes cuenta en GALEL?' };
+               break;
+             case 'auth/wrong-password':
+               result = { title: '¡Oops!', message: 'Contraseña incorrecta.' };
+               break;
+             case 'auth/weak-password':
+               result = { title: '¡Umm!', message: 'Contraseña muy débil, intenta otra de nuevo.' };
+               break;
+             case 'auth/invalid-email':
+               result = { title: '¡Oops!', message: 'Verifica que sea un correo válido.' };
+               break;
+             case 'auth/email-already-in-use':
+               result = { title: '¡Umm!', message: 'Este correo o nombre de usuario ya está siendo utilizado.' };
+               break;
             // case 'auth/requires-recent-login':
             //   result = { title: 'Atenção', message: 'Esta é uma operação sensível e requer que você efetue o login novamente.' };
             //   break;

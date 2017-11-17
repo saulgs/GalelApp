@@ -23,7 +23,7 @@ export class AccountLoginSocialComponent {
       //
       // Google Login, solo haciendo bulto
       //
-      case 'google':
+ /*     case 'google':
         this.user.authWithGoogle().then((authData: any) => {
           console.log('authData: ' + authData);
           let googleProviderCredential = this.user.fire.auth.GoogleAuthProvider.credential(authData.idToken, authData.accessToken);
@@ -34,7 +34,7 @@ export class AccountLoginSocialComponent {
           alert(error)
         });
         break;
-      //
+*/      //
       // Facebook Login
       //
       case 'facebook':

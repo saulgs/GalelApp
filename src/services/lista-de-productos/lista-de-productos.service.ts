@@ -18,8 +18,4 @@ export class ListaDeProductosService{
     ingresarProducto(item: Item){
         return this.ReferenciaListaDeProductos.push(item);
     }
-
-    editarProducto(key: string, item: Item){
-        return this.ReferenciaListaDeProductos.update(key, item);
-    }
 }
